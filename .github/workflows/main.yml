@@ -29,4 +29,4 @@ jobs:
         username: ${{ secrets.user }}
         password: ${{ secrets.password }}
         local-dir: ./_site/
-        server-dir: httpdocs
+        server-dir: /httpdocs/
