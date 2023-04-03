@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+{% include 'head/seo-meta.njk' %}
+{% include 'head/hreflang.njk' %}
+{% set css %}
+    {% include "styles/fonts.css" %}
+    {% include "styles/layout.css" %}
+{% endset %}
+<!-- feed it through our cssmin filter to minify -->
+<style>
+    {{ css | cssmin | safe }}
+</style>

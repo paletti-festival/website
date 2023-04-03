@@ -1,0 +1,4 @@
+<link rel="alternate" hreflang="{{lang}}" href="https://www.paletti.info/{{page.url}}">
+{% for link in page.url | locale_links %}
+<link rel="alternate" hreflang="{{link.lang}}" href="https://www.paletti.info/{{link.url}}">
+{% endfor %}

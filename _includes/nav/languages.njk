@@ -1,0 +1,6 @@
+<div class="languages">
+{% for link in page.url | locale_links %}
+{%- if not loop.first %},{% endif %}
+<a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}">{{ '/images/languages.svg' | svgContents | safe}}{{link.label}}</a>
+{% endfor %}
+</div>

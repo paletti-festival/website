@@ -1,0 +1,97 @@
+:root {
+    --main-color: #e6cea5;
+    --bg-color: white;
+}
+
+body {
+    margin: 0;
+}
+
+header,
+main,
+footer {
+    padding: 1em;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: inherit;
+}
+
+img,
+svg {
+    height: 100%;
+    width: auto;
+}
+
+header {
+    padding: .5em 1em;
+    background: var(--main-color);
+}
+
+nav {
+    display: flex;
+    height: 5rem;
+}
+
+.logo {
+    display: block;
+}
+
+.languages {
+    align-self: center;
+    margin-left: auto;
+    
+}
+
+.languages a svg {
+    height: 1.3em;
+}
+
+.languages a {
+    text-decoration: none;
+    display: flex;
+    gap: 0.25em;
+    padding: 0.25em;
+}
+
+.languages a:hover,
+.languages a:focus-visible {
+    text-decoration: underline;
+}
+
+main {
+    background-color: var(--bg-color);
+    z-index: 2;
+    position: relative;
+    margin-bottom: 10rem;
+}
+
+footer {
+    background-color: #eee;
+    color: #333;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer span {
+    margin-right: 2em;
+}
+
+button, .button {
+    display: inline-block;
+    background-color: var(--main-color);
+    border: 0;
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 0.8em 1em;
+    border-radius: 3px;
+    text-decoration: none;
+}

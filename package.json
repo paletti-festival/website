@@ -1,0 +1,16 @@
+{
+  "name": "paletti_info",
+  "version": "1.0.0",
+  "description": "Website of paletti festival",
+  "private": true,
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "eleventy-plugin-svg-contents": "^0.7.0",
+    "html-minifier": "^4.0.0",
+    "lightningcss": "^1.19.0"
+  },
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  }
+}
