@@ -1,5 +1,14 @@
 {
     "lang": "de",
     "layout": "layout.njk",
-    "cookie_text": "keine Cookies, kein Tracking – alles paletti"
+    "cookie_text": "keine Cookies, kein Tracking – alles paletti",
+    "newsletter": {
+        "success": "Deine Anmeldung war erfolgreich.",
+        "error": "Deine Anmeldung konnte nicht gespeichert werden. Bitte versuch es erneut.",
+        "paragraph": "Melde dich zu unserem Newsletter an, um auf dem Laufenden zu bleiben.",
+        "confirmation": "Ich möchte den Newsletter erhalten und akzeptiere die Datenschutzerklärung.",
+        "unsubscribe": "Du kannst den Newsletter jederzeit über den Link in unserem Newsletter abbestellen.",
+        "subscribe": "Anmelden",
+        "field_empty": "Dieses Feld darf nicht leer sein."
+    }
 }
