@@ -16,8 +16,17 @@ title: Paletti
     </header>
     <main>
       <div class="wrapper">
-        {{ content | safe }}
-        {% include 'main/newsletter_button.njk' %}
+        <section>
+          {{ content | safe }}
+        </section>
+        {%- for post in collections.main -%}
+        {% if post.data.lang == page.lang %}
+          {{ post.content | safe}}
+        {% endif %}
+        {%- endfor -%}
+        <section>
+          {% include 'sendinblue.njk' %}
+        </section>
       </div>
     </main>
     <footer>

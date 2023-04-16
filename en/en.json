@@ -1,5 +1,14 @@
 {
     "lang": "en",
     "layout": "layout.njk",
-    "cookie_text": "no cookies, no tracking - tutti paletti"
+    "cookie_text": "no cookies, no tracking - tutti paletti",
+    "newsletter": {
+        "success": "Your registration was successful.",
+        "error": "Your registration could not be saved. Please try again.",
+        "paragraph": "Subscribe to our newsletter to stay up to date.",
+        "confirmation": "I want to receive the newsletter and accept the privacy policy.",
+        "unsubscribe": "You can unsubscribe from our newsletter at any time using the link in our newsletter.",
+        "subscribe": "Subscribe",
+        "field_empty": "This field must not be empty."
+    }
 }
