@@ -13,7 +13,7 @@ Rebenring 33 \
 
 ## Contact
 
-E-Mail:
+E-Mail: hallo@paletti.info
 
 ## Authorized representatives
 
