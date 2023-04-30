@@ -3,6 +3,7 @@ newsletter:
     url: "#"
     text: "Subscribe newsletter"
 description: "A small festival that appears out of nowhere!"
+layout: index
 ---
 # The "paletti": A small festival that appears out of nowhere!
 

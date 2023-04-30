@@ -16,17 +16,7 @@ title: Paletti
     </header>
     <main>
       <div class="wrapper">
-        <section>
-          {{ content | safe }}
-        </section>
-        {%- for post in collections.main -%}
-        {% if post.data.lang == page.lang %}
-          {{ post.content | safe}}
-        {% endif %}
-        {%- endfor -%}
-        <section>
-          {% include 'sendinblue.njk' %}
-        </section>
+        {{ content | safe }}
       </div>
     </main>
     <footer>
