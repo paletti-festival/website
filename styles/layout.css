@@ -61,7 +61,7 @@ nav {
 }
 
 main {
-    background-color: var(--bg-color);
+    background-color: white;
     z-index: 2;
     position: relative;
     margin-bottom: 10rem;
