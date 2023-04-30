@@ -13,7 +13,7 @@ Rebenring 33 \
 
 ## Kontaktmöglichkeiten
 
-E-Mail-Adresse:
+E-Mail-Adresse: hallo@paletti.info
 
 ## Vertretungsberechtigte Personen
 
