@@ -3,6 +3,7 @@ newsletter:
     url: "#"
     text: "Newsletter abonnieren"
 description: "Ein Kleinfestival, das wie aus dem Nichts erscheint!"
+layout: index
 ---
 # Das "paletti": Ein Kleinfestival, das wie aus dem Nichts erscheint!
 

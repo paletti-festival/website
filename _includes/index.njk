@@ -1,0 +1,13 @@
+---
+layout: layout
+---
+<section>
+    {{ content | safe }}
+</section>
+{%- for post in collections.main -%}
+{% if post.data.lang == page.lang %}
+    <section>
+    {{ post.content | safe}}
+    </section>
+{% endif %}
+{%- endfor -%}
