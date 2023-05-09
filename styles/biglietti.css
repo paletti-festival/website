@@ -3,7 +3,6 @@
     gap: 0.5rem;
     margin-bottom: 2rem;
     overflow-x: auto;
-    justify-content: space-between;
 }
 
 .biglietti {
@@ -11,6 +10,7 @@
     border-radius: 3px;
     flex-shrink: 0;
     position: relative;
+    font-size: 0.95rem;
 }
 
 .biglietti::before {
@@ -23,7 +23,6 @@
     position: absolute;
     background: radial-gradient(circle at 0, white 30%, black 30%, black 40%, transparent 40%);
     background-size: var(--size) calc(var(--size) * 1.5);
-    
 }
 
 .biglietti .row {
