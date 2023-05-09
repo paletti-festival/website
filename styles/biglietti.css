@@ -1,15 +1,29 @@
 .biglietti-list {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-bottom: 2rem;
     overflow-x: auto;
+    justify-content: space-between;
 }
 
 .biglietti {
     border: 1px solid black;
     border-radius: 3px;
     flex-shrink: 0;
-    font-size: 0.9rem;
+    position: relative;
+}
+
+.biglietti::before {
+    --size: 10px;
+    content: "";
+    height: 100%;
+    width: var(--size);
+    transform: translateX(-1px);
+    display: block;
+    position: absolute;
+    background: radial-gradient(circle at 0, white 30%, black 30%, black 40%, transparent 40%);
+    background-size: var(--size) calc(var(--size) * 1.5);
+    
 }
 
 .biglietti .row {
@@ -31,12 +45,20 @@
 .biglietti .row > span:first-child,
 .biglietti .row > div:first-child {
     border-left: 0;
+    padding-left: 0.75em;
 }
 
 .biglietti .title {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.biglietti .title svg {
+    height: 80%
 }
 
 .biglietti .date-time {
