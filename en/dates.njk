@@ -1,0 +1,35 @@
+---
+tags: main
+permalink: false
+---
+
+
+<h2>Dates</h2>
+
+<div class="biglietti-list">
+{%- for post in collections.dates -%}
+    <div class="biglietti">
+        <div class="row">
+            <span class="title">{{ post.data.title }}</span>
+        </div>
+        <div class="row">
+            <div class="date-time">
+                <span class="date">{{ post.data.date.toLocaleDateString('en-EN', {day: "2-digit", month: "short", year: "numeric"}) }}</span>
+                <span class="time">
+                    {{ post.data.date.toLocaleTimeString('en-EN', {hour: "2-digit"}) }} –
+                    {{ post.data.until.toLocaleTimeString('en-EN', {hour: "2-digit"}) }}
+                </span>
+            </div>
+            <span class="text">
+                Free entrance<br>
+                Hello donation
+            </span>
+        </div>
+        <div class="row">
+            <span class="address">
+                {{ post.data.address }}
+            </span>
+        </div>
+    </div>
+{%- endfor -%}
+</div>
