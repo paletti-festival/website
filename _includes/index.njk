@@ -4,7 +4,7 @@ layout: layout
 <section>
     {{ content | safe }}
 </section>
-{%- for post in collections.main -%}
+{%- for post in collections.main | reverse -%}
 {% if post.data.lang == page.lang %}
     <section>
     {{ post.content | safe}}
