@@ -1,9 +1,9 @@
 name: 💾 Update Files
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '00 3 * * *'
 jobs:
   download-form-style:
     permissions: write-all
@@ -24,4 +24,14 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           url: https://sibforms.com/forms/end-form/build/main.js
+          dir: scripts
+  download-form-script-license:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: wow-actions/download-upload@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: https://sibforms.com/forms/end-form/build/main.js.LICENSE.txt
           dir: scripts
