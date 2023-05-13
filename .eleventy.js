@@ -32,5 +32,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("fonts");
+  eleventyConfig.addPassthroughCopy("scripts");
+  eleventyConfig.addPassthroughCopy("styles/sib-styles.css");
   eleventyConfig.addPassthroughCopy({"favicons": "."});
 };
