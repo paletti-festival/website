@@ -1,5 +1,7 @@
 body {
+    --bg-color: white;
     margin: 0;
+    background-color: var(--bg-color);
 }
 
 header,
@@ -42,6 +44,7 @@ nav {
 .logo {
     display: block;
     height: inherit;
+    background: white;
 }
 
 .languages {
@@ -67,15 +70,13 @@ nav {
 }
 
 main {
-    background-color: white;
+    background-color: var(--bg-color);
     z-index: 2;
     position: relative;
     margin-bottom: 10rem;
 }
 
 footer {
-    background-color: #eee;
-    color: #333;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -94,7 +95,7 @@ button, .button {
     padding: 0.6em 1em;
     text-decoration: none;
     text-transform: uppercase;
-    border: 2px solid black;
+    border: 2px solid currentcolor;
 }
 
 .start {

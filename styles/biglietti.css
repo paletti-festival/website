@@ -6,7 +6,7 @@
 }
 
 .biglietti {
-    border: 1px solid black;
+    border: 1px solid currentcolor;
     border-radius: 3px;
     flex-shrink: 0;
     position: relative;
@@ -21,13 +21,13 @@
     transform: translateX(-1.5px);
     display: block;
     position: absolute;
-    background: radial-gradient(circle at 0, white 30%, black 30%, black 40%, transparent 40%);
+    background: radial-gradient(circle at 0, var(--bg-color) 30%, currentcolor 30%, currentcolor 40%, transparent 40%);
     background-size: var(--size) calc(var(--size) * 1.5);
 }
 
 .biglietti .row {
     display: flex;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid currentcolor;
     justify-content: space-between;
 }
 
@@ -38,7 +38,7 @@
 .biglietti .row > span,
 .biglietti .row > div {
     padding: 0.25em 0.5em;
-    border-left: 1px solid black;
+    border-left: 1px solid currentcolor;
 }
 
 .biglietti .row > span:first-child,
