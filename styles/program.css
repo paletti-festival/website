@@ -52,6 +52,13 @@
 }
 
 @media (min-width: 600px) {
+    .program .category {
+        grid-template-columns: 8em 1fr;
+    }
+    .program h3 {
+        writing-mode: initial;
+        transform: none;
+    }
     .program .item {
         grid-template-columns: 1fr 2fr;
         grid-template-rows: auto 1fr;
