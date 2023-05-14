@@ -18,6 +18,23 @@ module.exports = function(eleventyConfig) {
     }).code;
   });
 
+  eleventyConfig.addFilter("formatDate", async function(date) {
+    console.log(this)
+    if (this.ctx.lang == "en") {
+      return date.toLocaleDateString('en-EN', {day: "2-digit", month: "short", year: "numeric"});
+    }
+
+    return date.toLocaleDateString('de-DE', {day: "2-digit", month: "short", year: "numeric"});
+  });
+
+  eleventyConfig.addFilter("formatTime", async function(date) {
+    if (this.ctx.lang == "en") {
+      return date.toLocaleTimeString('en-EN', {hour: "2-digit"});
+    }
+
+    return date.toLocaleTimeString('de-DE', {hour: "2-digit", minute: "2-digit"});
+  });
+
   eleventyConfig.addTransform("htmlmin", function(content) {
     if( this.page.outputPath && this.page.outputPath.endsWith(".html") ) {
       let minified = htmlmin.minify(content, {
