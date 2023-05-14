@@ -1,7 +1,7 @@
 ---
-layout: layout
+layout: base
 ---
-<section>
+<section class="start large-wrapper">
     {{ content | safe }}
 </section>
 {%- for post in collections.main | reverse -%}
@@ -9,6 +9,8 @@ layout: layout
     <section
     {% if post.data.class %}
     class="{{ post.data.class }}"
+    {% else %}
+    class="wrapper"
     {% endif %}
     >
     {{ post.content | safe}}
