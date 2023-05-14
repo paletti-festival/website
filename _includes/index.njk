@@ -6,7 +6,11 @@ layout: layout
 </section>
 {%- for post in collections.main | reverse -%}
 {% if post.data.lang == page.lang %}
-    <section>
+    <section
+    {% if post.data.class %}
+    class="{{ post.data.class }}"
+    {% endif %}
+    >
     {{ post.content | safe}}
     </section>
 {% endif %}
