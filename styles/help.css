@@ -1,0 +1,34 @@
+.help {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.help .help-text {
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap;
+    text-overflow: clip;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.help > *:first-child {
+    margin-top: 2rem;
+}
+
+.help >*:last-child {
+    margin-bottom: 2rem;
+}
+
+.help p {
+    margin: 0;
+}
+
+.help .button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
