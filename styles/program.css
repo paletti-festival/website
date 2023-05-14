@@ -1,0 +1,81 @@
+.program {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.program .category {
+    display: grid;
+    gap: 1em;
+    position: relative;
+    grid-template-columns: 2em 1fr;
+}
+
+.program .headline-container {
+    padding-right: 0.25em;
+    border-right: 1px solid black;
+    grid-column-start: 1;
+}
+
+.program h3 {
+    position: sticky;
+    top: 0.5em;
+    writing-mode: vertical-lr;
+    margin: 0;
+    transform: rotate(180deg);
+}
+
+.program .items {
+    grid-column-start: 2;
+}
+
+.program .item {
+    display: grid;
+    grid-template-areas:
+            "headline"
+            "time"
+            "description"
+            "line";
+    column-gap: 1.5em;
+    row-gap: .25em;
+    grid-column-start: 2;
+    margin-bottom: 1.5em;
+}
+
+.program .item:last-child {
+   margin-bottom: 0;
+}
+
+.program .time,
+.program h4 {
+    font-size: 1.1rem;
+}
+
+@media screen and (min-width: 600px) {
+    .program .item {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "headline description"
+            "time description";
+    }
+
+    .program .time,
+    .program h4 {
+        text-align: right;
+    }
+}
+
+.program h4 {
+    grid-area: headline;
+    margin: 0;
+}
+
+.program .time {
+    grid-area: time;
+}
+
+.program p {
+    grid-area: description;
+    margin: 0;
+}

@@ -1,0 +1,66 @@
+---
+date: 2023-05-10
+tags: main
+permalink: false
+---
+
+<h2>Aktuelles Programm</h2>
+<p>
+    Das Programm für Paletti 01 am 20. Mai 2023 im Niemandsland.
+</p>
+<div class="program">
+    {%- for post in collections.dates -%}
+        {% if post.data.program.workshops %}
+            <div class="category">
+                <div class="headline-container">
+                    <h3>Workshops</h3>
+                </div>
+                <div class="items">
+                    {%- for workshop in post.data.program.workshops -%}
+                        <div class="item">
+                            <h4>{{ workshop.name }}</h4>
+                            <div class="time">
+                                {{ workshop.start.toLocaleTimeString('de-DE', {hour: "2-digit", minute: "2-digit"}) }} –
+                                {{ workshop.end.toLocaleTimeString('de-DE', {hour: "2-digit", minute: "2-digit"}) }}
+                            </div>
+                            <p>{{ workshop.description }}</p>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        {% endif %}
+        {% if post.data.program.presentations %}
+            <div class="category">
+                <div class="headline-container">
+                    <h3>Vorträge</h3>
+                </div>
+                <div class="items">
+                    {%- for presentation in post.data.program.presentations -%}
+                        <div class="item">
+                            <h4>{{ presentation.name }}</h4>
+                            <div class="time">
+                                {{ presentation.start.toLocaleTimeString('de-DE', {hour: "2-digit", minute: "2-digit"}) }}
+                            </div>
+                            <p>{{ presentation.description }}</p>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        {% endif %}
+        {% if post.data.program.music %}
+            <div class="category">
+                <div class="headline-container">
+                    <h3>Musik</h3>
+                </div>
+                <div class="items">
+                    {%- for music in post.data.program.music -%}
+                        <div class="item">
+                            <h4>{{ music.name }}</h4>
+                            <p>{{ music.description }}</p>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        {% endif %}
+    {%- endfor -%}
+</div>
