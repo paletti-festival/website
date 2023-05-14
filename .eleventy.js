@@ -1,6 +1,7 @@
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const svgContents = require("eleventy-plugin-svg-contents");
-const { transform } = require("lightningcss");
+const { transform, browserslistToTargets } = require("lightningcss");
+const browserslist = require("browserslist");
 const htmlmin = require("html-minifier");
 
 module.exports = function(eleventyConfig) {
@@ -11,10 +12,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(svgContents);
 
   eleventyConfig.addFilter("cssmin", function(code) {
+    let targets = browserslistToTargets(browserslist("defaults"));
+
     return transform({
       code: Buffer.from(code),
       minify: true,
-      sourceMap: true
+      sourceMap: true,
+      targets
     }).code;
   });
 
