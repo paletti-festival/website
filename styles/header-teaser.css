@@ -1,0 +1,14 @@
+.header-teaser {
+    padding: 0 1em;
+    align-self: center;
+}
+
+.header-teaser span {
+    font-size: 0.8em;
+    margin-bottom: 0.3em;
+    display: block;
+}
+
+.header-teaser div {
+    line-height: 1.1;
+}

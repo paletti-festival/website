@@ -1,0 +1,6 @@
+<div class="header-teaser">
+    {% set next = collections.dates | nextDate %}
+
+    <span>Next Paletti:</span>
+    <div>{{ next.date | formatDate}}<br>{{ next.data.place.name }}</div>
+</div>

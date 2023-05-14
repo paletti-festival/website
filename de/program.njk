@@ -4,24 +4,24 @@ tags: main
 permalink: false
 ---
 
-<h2>Aktuelles Programm</h2>
-<p>
-    Das Programm für Paletti 01 am 20. Mai 2023 im Niemandsland.
-</p>
-<div class="program">
-    {%- for post in collections.dates -%}
-        {% if post.data.program.workshops %}
+{% set next = collections.dates | nextDate %}
+{% if next.data.program %}
+    <h2>Aktuelles Programm</h2>
+    <p>
+        Das Programm für {{ next.data.title }} am {{ next.date | formatDate }}, {{ next.data.place.name }}.
+    </p>
+    <div class="program">
+        {% if next.data.program.workshops %}
             <div class="category">
                 <div class="headline-container">
                     <h3>Workshops</h3>
                 </div>
                 <div class="items">
-                    {%- for workshop in post.data.program.workshops -%}
+                    {%- for workshop in next.data.program.workshops -%}
                         <div class="item">
                             <h4>{{ workshop.name }}</h4>
                             <div class="time">
-                                {{ workshop.start | formatTime }} –
-                                {{ workshop.end | formatTime }}
+                                {{ workshop.start | formatTime }} – {{ workshop.end | formatTime }}
                             </div>
                             <p>{{ workshop.description }}</p>
                         </div>
@@ -29,13 +29,13 @@ permalink: false
                 </div>
             </div>
         {% endif %}
-        {% if post.data.program.presentations %}
+        {% if next.data.program.presentations %}
             <div class="category">
                 <div class="headline-container">
                     <h3>Vorträge</h3>
                 </div>
                 <div class="items">
-                    {%- for presentation in post.data.program.presentations -%}
+                    {%- for presentation in next.data.program.presentations -%}
                         <div class="item">
                             <h4>{{ presentation.name }}</h4>
                             <div class="time">
@@ -47,13 +47,13 @@ permalink: false
                 </div>
             </div>
         {% endif %}
-        {% if post.data.program.music %}
+        {% if next.data.program.music %}
             <div class="category">
                 <div class="headline-container">
                     <h3>Musik</h3>
                 </div>
                 <div class="items">
-                    {%- for music in post.data.program.music -%}
+                    {%- for music in next.data.program.music -%}
                         <div class="item">
                             <h4>{{ music.name }}</h4>
                             <p>{{ music.description }}</p>
@@ -62,5 +62,5 @@ permalink: false
                 </div>
             </div>
         {% endif %}
-    {%- endfor -%}
-</div>
+    </div>
+{% endif %}
