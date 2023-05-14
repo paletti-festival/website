@@ -19,7 +19,6 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("formatDate", async function(date) {
-    console.log(this)
     if (this.ctx.lang == "en") {
       return date.toLocaleDateString('en-EN', {day: "2-digit", month: "short", year: "numeric"});
     }
@@ -33,6 +32,18 @@ module.exports = function(eleventyConfig) {
     }
 
     return date.toLocaleTimeString('de-DE', {hour: "2-digit", minute: "2-digit"});
+  });
+
+  eleventyConfig.addFilter("nextDate", async function(events) {
+    const now = new Date();
+
+    for (let event of events) {
+      if (now < event.data.until) {
+        return event;
+      }
+    }
+
+    return {};
   });
 
   eleventyConfig.addTransform("htmlmin", function(content) {

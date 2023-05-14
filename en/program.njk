@@ -4,64 +4,64 @@ tags: main
 permalink: false
 ---
 
-<h2>Current program</h2>
-<p>
-    The program for Paletti 01 on May 20, 2023 in Niemandsland.<br>
-    All workshops and talks are held in german language.
-</p>
-<div class="program">
-    {%- for post in collections.dates -%}
-        {% if post.data.program.workshops %}
-            <div class="category">
-                <div class="headline-container">
-                    <h3>Workshops</h3>
-                </div>
-                <div class="items">
-                    {%- for workshop in post.data.program.workshops -%}
-                        <div class="item">
-                            <h4>{{ workshop.name }}</h4>
-                            <div class="time">
-                                {{ workshop.start | formatTime }} –
-                                {{ workshop.end | formatTime }}
+{% set next = collections.dates | nextDate %}
+{% if next.data.program %}
+    <h2>Current program</h2>
+    <p>
+        The program for {{ next.data.title }} on {{ next.date | formatDate }}, {{ next.data.place.name }}.<br>
+            All workshops and talks are held in german language.
+        </p>
+        <div class="program">
+            {% if next.data.program.workshops %}
+                <div class="category">
+                    <div class="headline-container">
+                        <h3>Workshops</h3>
+                    </div>
+                    <div class="items">
+                        {%- for workshop in next.data.program.workshops -%}
+                            <div class="item">
+                                <h4>{{ workshop.name }}</h4>
+                                <div class="time">
+                                    {{ workshop.start | formatTime }} – {{ workshop.end | formatTime }}
+                                </div>
+                                <p>{{ workshop.description }}</p>
                             </div>
-                            <p>{{ workshop.description }}</p>
-                        </div>
-                    {%- endfor -%}
+                        {%- endfor -%}
+                    </div>
                 </div>
-            </div>
-        {% endif %}
-        {% if post.data.program.presentations %}
-            <div class="category">
-                <div class="headline-container">
-                    <h3>Talks</h3>
-                </div>
-                <div class="items">
-                    {%- for presentation in post.data.program.presentations -%}
-                        <div class="item">
-                            <h4>{{ presentation.name }}</h4>
-                            <div class="time">
-                                {{ presentation.start | formatTime }}
+            {% endif %}
+            {% if next.data.program.presentations %}
+                <div class="category">
+                    <div class="headline-container">
+                        <h3>Talks</h3>
+                    </div>
+                    <div class="items">
+                        {%- for presentation in next.data.program.presentations -%}
+                            <div class="item">
+                                <h4>{{ presentation.name }}</h4>
+                                <div class="time">
+                                    {{ presentation.start | formatTime }}
+                                </div>
+                                <p>{{ presentation.description }}</p>
                             </div>
-                            <p>{{ presentation.description }}</p>
-                        </div>
-                    {%- endfor -%}
+                        {%- endfor -%}
+                    </div>
                 </div>
-            </div>
-        {% endif %}
-        {% if post.data.program.music %}
-            <div class="category">
-                <div class="headline-container">
-                    <h3>Music</h3>
+            {% endif %}
+            {% if next.data.program.music %}
+                <div class="category">
+                    <div class="headline-container">
+                        <h3>Music</h3>
+                    </div>
+                    <div class="items">
+                        {%- for music in next.data.program.music -%}
+                            <div class="item">
+                                <h4>{{ music.name }}</h4>
+                                <p>{{ music.description }}</p>
+                            </div>
+                        {%- endfor -%}
+                    </div>
                 </div>
-                <div class="items">
-                    {%- for music in post.data.program.music -%}
-                        <div class="item">
-                            <h4>{{ music.name }}</h4>
-                            <p>{{ music.description }}</p>
-                        </div>
-                    {%- endfor -%}
-                </div>
-            </div>
-        {% endif %}
-    {%- endfor -%}
-</div>
+            {% endif %}
+    </div>
+{% endif %}
