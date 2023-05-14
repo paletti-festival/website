@@ -20,8 +20,8 @@ permalink: false
                         <div class="item">
                             <h4>{{ workshop.name }}</h4>
                             <div class="time">
-                                {{ workshop.start.toLocaleTimeString('de-DE', {hour: "2-digit", minute: "2-digit"}) }} –
-                                {{ workshop.end.toLocaleTimeString('de-DE', {hour: "2-digit", minute: "2-digit"}) }}
+                                {{ workshop.start | formatTime }} –
+                                {{ workshop.end | formatTime }}
                             </div>
                             <p>{{ workshop.description }}</p>
                         </div>
@@ -39,7 +39,7 @@ permalink: false
                         <div class="item">
                             <h4>{{ presentation.name }}</h4>
                             <div class="time">
-                                {{ presentation.start.toLocaleTimeString('de-DE', {hour: "2-digit", minute: "2-digit"}) }}
+                                {{ presentation.start | formatTime }}
                             </div>
                             <p>{{ presentation.description }}</p>
                         </div>

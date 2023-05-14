@@ -13,10 +13,10 @@ permalink: false
         </div>
         <div class="row">
             <div class="date-time">
-                <span class="date">{{ post.data.date.toLocaleDateString('en-EN', {day: "2-digit", month: "short", year: "numeric"}) }}</span>
+                <span class="date">{{ post.data.date | formatDate }}</span>
                 <span class="time">
-                    {{ post.data.date.toLocaleTimeString('en-EN', {hour: "2-digit"}) }} –
-                    {{ post.data.until.toLocaleTimeString('en-EN', {hour: "2-digit"}) }}
+                    {{ post.data.date | formatTime }} –
+                    {{ post.data.until | formatTime }}
                 </span>
             </div>
             <span class="text">
