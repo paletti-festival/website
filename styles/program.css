@@ -17,7 +17,7 @@
 
 .program .headline-container {
     padding-right: 0.25em;
-    border-right: 1px solid black;
+    border-right: 1px solid currentcolor;
     grid-column-start: 1;
 }
 
