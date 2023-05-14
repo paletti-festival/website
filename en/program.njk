@@ -6,7 +6,7 @@ permalink: false
 
 {% set next = collections.dates | nextDate %}
 {% if next.data.program %}
-    <h2>Current program</h2>
+    <h2>Program</h2>
     <p>
         The program for <b>{{ next.data.title }}</b> on <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.<br>
             All workshops and talks are held in german language.
