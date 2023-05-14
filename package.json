@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "browserslist": "^4.21.5",
     "eleventy-plugin-svg-contents": "^0.7.0",
     "html-minifier": "^4.0.0",
     "lightningcss": "^1.19.0"
@@ -12,5 +13,6 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy"
-  }
+  },
+  "browserslist": ".5% or last 2 versions"
 }
