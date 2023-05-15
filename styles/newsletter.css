@@ -103,3 +103,7 @@
 .sib-form__declaration p {
     font-size: 0.8rem!important;
 }
+
+.sib-form .clickable_link {
+    text-decoration: underline;
+}
