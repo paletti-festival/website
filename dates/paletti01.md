@@ -33,7 +33,7 @@ program:
       description: "Die Multiinstrumentalistin Lisa Strat ersetzt mit ihrer energiegeladenen Performance nicht nur klanglich eine ganze Band, sondern auch mit ihrer Bühnenperformance."
     - name: DJ May
       description: "May versucht mit ihrer Musik Grenzen zu brechen. Sie glaubt fest daran, dass jeder Akt politisch motiviert ist. Ihre Sets nennt sie deswegen auch magisch politisch, wo jede Person willkommen ist. Mit einer West-East-Fusion, auch bekannt als Nord-Afrikanisch-Oriental, gibt sie der Musik eine Bühne. Ihre Musik schwingt und bebt dabei immer zwischen melancholisch, orientalischen Klängen bis hin zu gut tanzbaren und mystischen Amazighi-Sound. Dabei schafft sie sich und den tanzenden (Rave-)Seelen eine schönere Heimat mit grenzenloser Freiheit!"
-    - name: DJ Lisa
+    - name: DJ Lrdk
       description: "Lisa veranstaltet in Berlin Schöneberg die Inseldisco. Eine offene, kostenlose Tanzveranstaltung für alle. Unter dem Pseudonym Lrdk verwöhnt sie euch auf dem Paletti mit melodischen Trance, Progessive House und synthegeladenem Italo."
     - name: DJ Fliesentisch
       description: "DJ Fliesentischs Stil lässt sich nur schwer in Worte fassen. Wenn man es versuchen würde, trifft es am ehesten das Gerne “Turbonostagie”. Es ist schnell, es ist wild, es ist verrückt. 100% DancePants Garantie."
