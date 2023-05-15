@@ -14,6 +14,7 @@
 #sib-container {
     background: unset!important;
     border-color: currentColor!important;
+    padding: 0.5rem 1rem!important;
 }
 
 .sib-form-block,
@@ -51,6 +52,17 @@
 
 .sib-form .checkbox {
     display: none;
+}
+
+.sib-form .entry__choice {
+    text-indent: 0;
+    padding-left: 0;
+}
+
+#sib-form .entry__choice label {
+    display: flex;
+    gap: 0.5em;
+    align-items: baseline;
 }
 
 .sib-form-block__button {
