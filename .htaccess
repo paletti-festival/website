@@ -10,15 +10,15 @@
 </IfModule>
 
 # BROWSER CACHING USING CACHE-CONTROL HEADERS
-<ifModule mod_headers.c> 
-    <filesMatch ".(woff|woff2)$">
+<IfModule mod_headers.c> 
+    <FilesMatch ".(woff|woff2)$">
         Header set Cache-Control: max-age=31536000, immutable
-    </filesMatch>
+    </FilesMatch>
 
-    <filesMatch ".(html)$">
+    <FilesMatch ".(html)$">
         Header set Cache-Control "max-age=300, private"
-    </filesMatch>
-</ifModule>
+    </FilesMatch>
+</IfModule>
 
 
 RewriteEngine on
