@@ -65,6 +65,18 @@
     align-items: baseline;
 }
 
+.entry__error {
+    padding: 0.5em;
+    font-size: 0.8rem!important;
+    border-radius: 0!important;
+    border: 1px solid currentColor;
+}
+
+.entry__error:empty {
+    padding: 0;
+    border: 0;
+}
+
 .sib-form-block__button {
     background: unset!important;
     border: 2px solid currentColor!important;
