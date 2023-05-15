@@ -1,6 +1,6 @@
 /* open-sans-regular - latin */
 @font-face {
-    font-display: block;
+    font-display: optional;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -10,7 +10,7 @@
 
 /* open-sans-600 - latin */
 @font-face {
-    font-display: block;
+    font-display: optional;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
@@ -20,7 +20,7 @@
   
   /* open-sans-700 - latin */
   @font-face {
-    font-display: block;
+    font-display: swap;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
@@ -31,7 +31,7 @@
 
 /* open-sans-800 - latin */
 @font-face {
-    font-display: block;
+    font-display: swap;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 800;
