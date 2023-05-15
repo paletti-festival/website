@@ -8,6 +8,19 @@ body {
     background-color: var(--bg-color);
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-color: #231f20;
+        color: #efefef;
+    }
+    svg {
+        filter: invert()
+    }
+    h1, h2 {
+        color: white;
+    }
+}
+
 header,
 main,
 footer {
@@ -49,6 +62,11 @@ nav {
     display: block;
     height: inherit;
     background: white;
+    outline: 2px solid white;
+}
+
+.logo svg {
+    filter: none;
 }
 
 .languages {
