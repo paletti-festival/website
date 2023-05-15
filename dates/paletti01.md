@@ -11,7 +11,7 @@ program:
       start: 2023-05-20 15:00:00+02:00
       end: 2023-05-20 17:00:00+02:00
       description: "Gesund, schmackhaft und haltbar. Matthias vom JugendUmweltPark präsentiert euch unterschiedliche fermentierte Sachen zum probieren. Anschließend könnt ihr euer eigenes Kimchi für zuhause ansetzen."
-    - name: Conter Cat Calling
+    - name: Cat Call Konter
       start: 2023-05-20 16:30:00+02:00
       end: 2023-05-20 18:00:00+02:00
       description: "Ziel des Workshops ist es, gemeinsam praktische Strategien zu entwickeln und  zu \"trainieren\", wie wir auf Catcalling reagieren können. Es geht aber nicht darum, die \"richtige\" Reaktion zu ertüfteln, sondern sicher und selbstbestimmt aus der Situation zu gehen und kontern zu können, ob durch intellektuelle Diskussion, Pöbelei oder ignorieren ist allen selbst überlassen."
