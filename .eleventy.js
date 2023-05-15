@@ -1,8 +1,9 @@
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const svgContents = require("eleventy-plugin-svg-contents");
-const { transform, browserslistToTargets } = require("lightningcss");
+const { bundle, transform, browserslistToTargets } = require("lightningcss");
 const browserslist = require("browserslist");
 const htmlmin = require("html-minifier");
+const path = require("node:path");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
@@ -63,8 +64,32 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+
+  eleventyConfig.addTemplateFormats("css");
+  eleventyConfig.addExtension("css", {
+    outputFileExtension: "css",
+
+    compile: async function(inputContent, inputPath) {
+      let parsed = path.parse(inputPath);
+      if(parsed.name.startsWith("_")) {
+        return;
+      }
+
+      let targets = browserslistToTargets(browserslist("defaults"));
+      let result = bundle({
+        filename: inputPath,
+        minify: true,
+        sourceMap: true,
+        targets
+      });
+
+      return async (data) => {
+        return result.code;
+      };
+    }
+  });
+
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("scripts");
-  eleventyConfig.addPassthroughCopy("styles/*.css");
   eleventyConfig.addPassthroughCopy({"favicons": "."});
 };

@@ -1,0 +1,72 @@
+@import '_sib-styles.css';
+
+.sib-form {
+    background: unset!important;
+    padding: 0;
+}
+
+.sib-form * {
+    font-family: inherit!important;
+    font-size: inherit!important;
+    color: inherit!important;
+}
+
+#sib-container {
+    background: unset!important;
+    border-color: currentColor!important;
+}
+
+.sib-form-block,
+.sib-form__declaration {
+    padding: 0;
+}
+
+
+.sib-form .entry__field {
+    background: unset;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+.sib-form .input {
+    border: 1px solid currentcolor;
+    border-radius: 0;
+}
+
+.sib-form .input::placeholder {
+    color: inherit;
+}
+
+.sib-form .input_replaced {
+    opacity: 1;
+    z-index: 0;
+    position: static;
+    accent-color: currentcolor;
+    margin: 0;
+}
+
+.sib-form .checkbox {
+    display: none;
+}
+
+.sib-form-block__button {
+    background: unset!important;
+    border: 2px solid currentColor!important;
+    border-radius: 0!important;
+    font-size: 0.8rem!important;
+    padding: .6em 1em!important;
+}
+
+/* Fix for Safari */ 
+.sib-form .icon__SVG {
+    display: none;
+}
+
+.sib-form .svgIcon-sphere {
+    filter: brightness(0);
+}
+
+.sib-form__declaration p {
+    font-size: 0.8rem!important;
+}
