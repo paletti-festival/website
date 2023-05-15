@@ -18,7 +18,7 @@ program:
       
     presentations:
     - name: Der Lindenhof präsentiert seine Solidarische Landwirtschaft
-      start: 2023-05-20 16:00:00+02:00
+      start: 2023-05-20 18:00:00+02:00
       description: "Woher kommen unsere Lebensmittel? Warum ist eine SoLaWi eine gute Möglichkeit für regionale (Bio)Betriebe? Eure Möglichkeit zu unterstützen und stets mit guten und klimaschonenden Lebensmitteln versorgt zu werden."
     - name: Das Paletti! Wo bist du hier?
       start: 2023-05-20 20:00:00+02:00
@@ -32,7 +32,7 @@ program:
     - name: Lisa Strat
       description: "Die Multiinstrumentalistin Lisa Strat ersetzt mit ihrer energiegeladenen Performance nicht nur klanglich eine ganze Band, sondern auch mit ihrer Bühnenperformance."
     - name: DJ May
-      description: "May präsentiert euch eine treibende West-East-Fusion aus nordafrikanischer sowie orientalischer Musik. Ihre Sets schwingen zwischen melancholischen, orientalischen Klängen und sehr tanzbarer Amazighi Musik."
+      description: "May versucht mit ihrer Musik Grenzen zu brechen. Sie glaubt fest daran, dass jeder Akt politisch motiviert ist. Ihre Sets nennt sie deswegen auch magisch politisch, wo jede Person willkommen ist. Mit einer West-East-Fusion, auch bekannt als Nord-Afrikanisch-Oriental, gibt sie der Musik eine Bühne. Ihre Musik schwingt und bebt dabei immer zwischen melancholisch, orientalischen Klängen bis hin zu gut tanzbaren und mystischen Amazighi-Sound. Dabei schafft sie sich und den tanzenden (Rave-)Seelen eine schönere Heimat mit grenzenloser Freiheit!"
     - name: DJ Lisa
       description: "Lisa veranstaltet in Berlin Schöneberg die Inseldisco. Eine offene, kostenlose Tanzveranstaltung für alle. Unter dem Pseudonym Lrdk verwöhnt sie euch auf dem Paletti mit melodischen Trance, Progessive House und synthegeladenem Italo."
     - name: DJ Fliesentisch
