@@ -15,3 +15,9 @@
 <style>
     {{ css | cssmin | safe }}
 </style>
+{% set js %}
+    {% include "scripts/darkmode.js" %}
+{% endset %}
+<script type="module">
+    {{ js | safe }}
+</script>

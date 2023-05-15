@@ -54,6 +54,7 @@ h1, h2 {
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     font-weight: 700;
+    color: var(--headline-color);
 }
 
 html {

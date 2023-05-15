@@ -4,20 +4,37 @@ html:focus-within {
 
 body {
     --bg-color: white;
+    --color: black;
+    --headline-color: black;
+    --svg-filter: ;
     margin: 0;
     background-color: var(--bg-color);
+    color: var(--color);
+    color-scheme: light;
+}
+
+body.dark-theme {
+    --bg-color: #231f20;
+    --color: #efefef;
+    --headline-color: white;
+    --svg-filter: invert();
+    color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
     body {
         --bg-color: #231f20;
-        color: #efefef;
+        --color: #efefef;
+        --headline-color: white;
+        --svg-filter: invert();
+        color-scheme: dark;
     }
-    svg {
-        filter: invert()
-    }
-    h1, h2 {
-        color: white;
+    body.light-theme {
+        --bg-color: white;
+        --color: black;
+        --headline-color: black;
+        --svg-filter: ;
+        color-scheme: light;
     }
 }
 
@@ -47,6 +64,10 @@ img,
 svg {
     height: 100%;
     width: auto;
+}
+
+svg {
+    filter: var(--svg-filter);
 }
 
 header {
@@ -95,7 +116,7 @@ main {
     background-color: var(--bg-color);
     z-index: 2;
     position: relative;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 
 footer {
@@ -103,6 +124,13 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+footer .wrapper {
+    display: flex;
+    gap: 0.25em 0.5em;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 footer span {
@@ -118,6 +146,8 @@ button, .button {
     text-decoration: none;
     text-transform: uppercase;
     border: 2px solid currentcolor;
+    background: none;
+    cursor: pointer;
 }
 
 .start {
@@ -189,6 +219,12 @@ button, .button {
     animation-iteration-count: infinite;
 }
 
+@media (prefers-reduced-motion) {
+    .start ul li {
+        animation-name: none;
+    }
+}
+
 .start ul li:nth-child(2) {
     animation-delay: var(--animation-time);
 }
@@ -218,4 +254,53 @@ button, .button {
     20% {
         opacity: 0;
     }
+}
+
+.toggle-wrapper {
+    margin-left: auto;
+}
+.tgl {
+    position: absolute;
+    opacity: 0;
+}
+.tgl-btn {
+    background: var(--color);
+    border-radius: 2em;
+    padding: 3px;
+    transition: all 0.4s ease;
+    display: block;
+    width: 3em;
+    height: 1.5em;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tgl-btn::after {
+    position: relative;
+    display: block;
+    content: "";
+    height: 100%;
+    left: 0;
+    border-radius: 50%;
+    background: var(--bg-color);
+    aspect-ratio: 1/1;
+    transition: all 0.2s ease;
+}
+.tgl:checked + .tgl-btn:after {
+    transform: translateX(3em) translateX(-100%);
+}
+.icon {
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--bg-color);
+    filter: none;
+}
+.icon_sun {
+    left: 10%;
+}
+.icon_moon {
+    right: 10%;
 }

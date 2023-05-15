@@ -7,6 +7,14 @@ title: Paletti
     {% include 'head.njk' %}
   </head>
   <body>
+    <script>
+      const currentTheme = localStorage.getItem("theme");
+      if (currentTheme == "dark") {
+          document.body.classList.add("dark-theme");
+      } else if (currentTheme == "light") {
+          document.body.classList.add("light-theme");
+      }
+  </script>
     <header>
       <div class="wrapper">
         <nav>

@@ -96,7 +96,7 @@
 
 @media (prefers-color-scheme: dark) {
     .sib-form .svgIcon-sphere {
-        filter: brightness(0) invert();
+        filter: brightness(0) var(--svg-filter);
     }
 }
 
