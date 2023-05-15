@@ -94,6 +94,12 @@
     filter: brightness(0);
 }
 
+@media (prefers-color-scheme: dark) {
+    .sib-form .svgIcon-sphere {
+        filter: brightness(0) invert();
+    }
+}
+
 .sib-form__declaration p {
     font-size: 0.8rem!important;
 }
