@@ -12,7 +12,7 @@
 # BROWSER CACHING USING CACHE-CONTROL HEADERS
 <IfModule mod_headers.c> 
     <FilesMatch ".(woff|woff2)$">
-        Header set Cache-Control: max-age=31536000, immutable
+        Header set Cache-Control: "max-age=31536000, immutable"
     </FilesMatch>
 
     <FilesMatch ".(html)$">
