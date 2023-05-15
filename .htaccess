@@ -9,6 +9,17 @@
  AddOutputFilterByType DEFLATE application/javascript
 </IfModule>
 
+# BROWSER CACHING USING CACHE-CONTROL HEADERS
+<ifModule mod_headers.c> 
+    <filesMatch ".(woff|woff2)$">
+        Header set Cache-Control: max-age=31536000, immutable
+    </filesMatch>
+
+    <filesMatch ".(html)$">
+        Header set Cache-Control "max-age=300, private"
+    </filesMatch>
+</ifModule>
+
 
 RewriteEngine on
 
