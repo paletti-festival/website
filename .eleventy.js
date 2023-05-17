@@ -23,16 +23,16 @@ module.exports = function(eleventyConfig) {
     }).code;
   });
 
-  eleventyConfig.addFilter("formatDate", async function(date) {
-    if (this.ctx.lang == "en") {
+  eleventyConfig.addFilter("formatDate", function(date) {
+    if (this.ctx?.lang == "en") {
       return date.toLocaleDateString('en-EN', {day: "2-digit", month: "short", year: "numeric"});
     }
 
     return date.toLocaleDateString('de-DE', {day: "2-digit", month: "short", year: "numeric"});
   });
 
-  eleventyConfig.addFilter("formatTime", async function(date) {
-    if (this.ctx.lang == "en") {
+  eleventyConfig.addFilter("formatTime", function(date) {
+    if (this.ctx?.lang == "en") {
       return date.toLocaleTimeString('en-EN', {hour: "2-digit"});
     }
 

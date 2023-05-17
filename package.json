@@ -9,6 +9,7 @@
     "check-html-links": "^0.2.4",
     "eleventy-plugin-svg-contents": "^0.7.0",
     "html-minifier": "^4.0.0",
+    "ics": "^3.1.0",
     "lightningcss": "^1.19.0"
   },
   "scripts": {
