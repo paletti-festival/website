@@ -6,11 +6,13 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "browserslist": "^4.21.5",
+    "check-html-links": "^0.2.4",
     "eleventy-plugin-svg-contents": "^0.7.0",
     "html-minifier": "^4.0.0",
     "lightningcss": "^1.19.0"
   },
   "scripts": {
+    "check": "check-html-links _site",
     "start": "eleventy --serve",
     "build": "eleventy"
   },
