@@ -3,7 +3,8 @@ const ics = require("ics");
 module.exports = class {
     data() {
         return {
-            permalink: "dates.ics"
+            permalink: "de/calendar.ics",
+            layout: false
         }
     }
 
@@ -31,13 +32,14 @@ module.exports = class {
         const events = [];
 
         for (const { data } of collections.dates) {
-            const { title, date, until, place, program } = data;
+            const { title, date, until, place, program, status } = data;
 
             const event = {
                 title,
                 start: this.toDateTimeArray(date),
                 end: this.toDateTimeArray(until),
                 startOutputType: "local",
+                calName: "Paletti Kleinfestival"
             }
 
             if (place) {
@@ -75,6 +77,9 @@ module.exports = class {
                     event.description = description;
                 }
             }
+
+            if (status)
+                event.status = status
 
             events.push(event);
         }
