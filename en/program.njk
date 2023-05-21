@@ -5,12 +5,22 @@ permalink: false
 ---
 
 {% set next = collections.dates | nextDate %}
+{% if not next %}
+    {% set next = collections.dates | lastDate %}
+    {% set isPast = true %}
+{% endif %}
 {% if next and next.data.program %}
     <h2>Program</h2>
-    <div class="program-text">
-        The program for <b>{{ next.data.title }}</b> on <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.<br>
+    {% if isPast %}
+        <div class="program-text">
+            That was the program for <b>{{ next.data.title }}</b> on <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.<br>
+            All workshops and talks were held in german language.        </div>
+    {% else %}
+        <div class="program-text">
+            The program for <b>{{ next.data.title }}</b> on <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.<br>
             All workshops and talks are held in german language.
         </div>
+    {% endif %}
         <div class="program">
             {% if next.data.program.workshops %}
                 <div class="category">

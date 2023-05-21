@@ -5,11 +5,21 @@ permalink: false
 ---
 
 {% set next = collections.dates | nextDate %}
+{% if not next %}
+    {% set next = collections.dates | lastDate %}
+    {% set isPast = true %}
+{% endif %}
 {% if next and next.data.program %}
     <h2>Programm</h2>
+    {% if isPast %}
+    <div class="program-text">
+        Das war das Programm für <b>{{ next.data.title }}</b> am <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.
+    </div>
+    {% else %}
     <div class="program-text">
         Das Programm für <b>{{ next.data.title }}</b> am <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.
     </div>
+    {% endif %}
     <div class="program">
         {% if next.data.program.workshops %}
             <div class="category">
