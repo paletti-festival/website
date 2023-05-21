@@ -5,7 +5,7 @@ permalink: false
 ---
 
 {% set next = collections.dates | nextDate %}
-{% if next.data.program %}
+{% if next and next.data.program %}
     <h2>Programm</h2>
     <div class="program-text">
         Das Programm für <b>{{ next.data.title }}</b> am <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.

@@ -43,12 +43,12 @@ module.exports = function(eleventyConfig) {
     const now = new Date();
 
     for (let event of events) {
-      if (now < event.data.until) {
+      if (now < event.data.until && event.data.status === "CONFIRMED") {
         return event;
       }
     }
 
-    return {};
+    return null;
   });
 
   eleventyConfig.addTransform("htmlmin", function(content) {
