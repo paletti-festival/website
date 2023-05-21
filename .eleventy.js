@@ -51,6 +51,22 @@ module.exports = function(eleventyConfig) {
     return null;
   });
 
+  eleventyConfig.addFilter("lastDate", async function(events) {
+    const now = new Date();
+    let last = null;
+
+    for (let event of events) {
+      if (now > event.data.until) {
+        return event;
+      }
+      if (event.data.status === "CONFIRMED") {
+        last = event;
+      }
+    }
+
+    return last;
+  });
+
   eleventyConfig.addTransform("htmlmin", function(content) {
     if( this.page.outputPath && this.page.outputPath.endsWith(".html") ) {
       let minified = htmlmin.minify(content, {
