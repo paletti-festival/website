@@ -29,6 +29,8 @@ program:
       start: 2023-05-20 20:30:00+02:00
       description: "Wieviel weißt du über Suffizienz? Garnichts? Macht nichts! Du kommst hier auch mit Knobeln und Bluffen durch. Hauptsache du bist dabei."
     music:
+    - name: Vivii
+      description: "Vivien studiert Freie Kunst an der HBK Braunschweig in der Fachklasse für Klangkunst bei Franziksa Windisch. Für das Paletti bringt sie eine Mischung aus aus Breakbeat, G Tech, Reggaeton, deconstructed club und experimentellen Klängen mit."
     - name: May Valerie Wyss
       description: "May Valerie Wyss bringt mit ihrer Stimme und ihrer Gitarre all das zum Vorschein, was sie sonst nicht in Worte fassen kann. Einfach mal lauschen und die Seele baumeln lassen."
     - name: Lisa Strat
