@@ -6,6 +6,7 @@ status: "CONFIRMED"
 place:
   name: "Niemandsland"
   address: "Weinbergstraße 46 - Brunswick"
+shift_url: https://signup.com/go/dVsMBtS
 program:
     workshops:
     - name: Fermentieren
