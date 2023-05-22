@@ -70,6 +70,7 @@
     font-size: 0.8rem!important;
     border-radius: 0!important;
     border: 1px solid currentColor;
+    background-color: rgba(255, 73, 73, 0.25)!important;
 }
 
 .entry__error:empty {
