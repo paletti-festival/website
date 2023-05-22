@@ -25,3 +25,9 @@
         <span class="sr-only">Toggle darkmode</span>
     </label>
 </div>
+{% set js %}
+    {% include "scripts/darkmode.js" %}
+{% endset %}
+<script>
+    {{ js | safe }}
+</script>
