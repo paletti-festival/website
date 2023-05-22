@@ -73,7 +73,15 @@ module.exports = function(eleventyConfig) {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,
-        minifyJS: true
+        minifyJS: true,
+        collapseBooleanAttributes: true,
+        decodeEntities: true,
+        minifyURLs: true,
+        removeAttributeQuotes: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        sortAttributes: true,
+        sortClassName: true
       });
       return minified;
     }
