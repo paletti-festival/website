@@ -2,7 +2,7 @@ const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const svgContents = require("eleventy-plugin-svg-contents");
 const { bundle, transform, browserslistToTargets } = require("lightningcss");
 const browserslist = require("browserslist");
-const minifyHtml = require("@minify-html/node");
+const htmlmin = require("html-minifier");
 const path = require("node:path");
 
 module.exports = function(eleventyConfig) {
@@ -69,10 +69,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addTransform("htmlmin", function(content) {
     if( this.page.outputPath && this.page.outputPath.endsWith(".html") ) {
-      let minified = minifyHtml.minify(Buffer.from(content), {
-        do_not_minify_doctype: true,
-        ensure_spec_compliant_unquoted_attribute_values: true,
-        minify_js: true
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
       });
       return minified;
     }
