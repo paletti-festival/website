@@ -1,5 +1,6 @@
 {
     "lang": "de",
+    "addToSitempap": true,
     "layout": "layout.njk",
     "cookie_text": "keine Cookies, kein Tracking – alles paletti",
     "newsletter": {
