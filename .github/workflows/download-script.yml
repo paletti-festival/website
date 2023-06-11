@@ -10,7 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: wow-actions/download-upload@v1
+      - uses: actions/checkout@v3
+        with:
+          repository: apriljunge/download-upload
+          ref: create-commit-only-on-filechange
+          path: tmp
+      - name: Install
+        working-directory: tmp
+        run: yarn
+      - name: Build
+        working-directory: tmp
+        run: yarn build
+      - uses: ./tmp/
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           url: https://sibforms.com/forms/end-form/build/sib-styles.css
@@ -21,7 +32,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: wow-actions/download-upload@v1
+      - uses: actions/checkout@v3
+        with:
+          repository: apriljunge/download-upload
+          ref: create-commit-only-on-filechange
+          path: tmp
+      - name: Install
+        working-directory: tmp
+        run: yarn
+      - name: Build
+        working-directory: tmp
+        run: yarn build
+      - uses: ./tmp/
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           url: https://sibforms.com/forms/end-form/build/main.js
@@ -31,7 +53,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: wow-actions/download-upload@v1
+      - uses: actions/checkout@v3
+        with:
+          repository: apriljunge/download-upload
+          ref: create-commit-only-on-filechange
+          path: tmp
+      - name: Install
+        working-directory: tmp
+        run: yarn
+      - name: Build
+        working-directory: tmp
+        run: yarn build
+      - uses: ./tmp/
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           url: https://sibforms.com/forms/end-form/build/main.js.LICENSE.txt
