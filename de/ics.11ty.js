@@ -4,6 +4,7 @@ module.exports = class {
     data() {
         return {
             permalink: "de/calendar.ics",
+            addToSitempap: false,
             layout: false
         }
     }
