@@ -2,7 +2,8 @@ local_backend: true
 locale: 'de'
 
 backend:
-  name: git-gateway
+  name: github
+  repo: paletti-festival/website
   branch: main
 
 media_folder: "static"
