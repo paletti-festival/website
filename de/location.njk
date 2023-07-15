@@ -1,0 +1,21 @@
+---
+date: 2023-05-12
+tags: main
+permalink: false
+templateEngineOverride: njk
+class: wrapper location
+---
+{%- set next = collections.dates | nextDate -%}
+{%- if not next -%}
+    {%- set next = collections.dates | lastDate -%}
+    {%- set isPast = true -%}
+{%- endif -%}
+{%- if next and next.data.place and next.data.place.description %}
+    <div><h2>Ort</h2>
+    <p>{{ next.data.place.description }}</p>
+    {% if next.data.place.coordinates -%}
+    <a href="http://maps.google.com/maps?q={{next.data.place.coordinates}}" class="coords" target="blank">{{ '/images/crosshair.svg' | svgContents | safe}} {{next.data.place.coordinates}}</a>
+    {%- endif -%}
+    </div>
+    {{ '/images/map.svg' | svgContents | safe}}
+{%- endif -%}

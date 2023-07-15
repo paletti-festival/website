@@ -25,6 +25,7 @@ collections:
       fields: 
         - {label: "Name", name: "name", widget: "string"}
         - {label: "Address", name: "address", widget: "string"}
+        - {label: "Descritption", name: "description", widget: "markdown"}
     - label: "Program"
       name: "program"
       widget: "object"
