@@ -7,6 +7,10 @@ shift_url: https://signup.com/go/dVsMBtS
 place:
   name: Garten Lebenshilfe
   address: Mittelweg 67, Braunschweig
+  description: "Versteckt zwischen Schrebergärten findet das Paletti 02 im Garten der Lebenshilfe
+    Braunschweig statt. Auf das Gelände kommt ihr über die Spargelstraße.
+    Der Eingang befindet sich zwischen Freyastraße und Wodanstraße."
+  coordinates: 52.2832, 10.5312
 program:
   workshops:
     - name: Textildruckworkshop
