@@ -1,0 +1,57 @@
+local_backend: true
+locale: 'de'
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static"
+
+collections:
+- name: "dates"
+  label: "Dates"
+  folder: "dates"
+  create: true
+  slug: "{{slug}}"
+  fields:
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Start", name: "date", widget: "datetime"}
+    - {label: "End", name: "until", widget: "datetime"}
+    - {label: "Status", name: "status", widget: "select", options: ["CONFIRMED", "TENTATIVE"]}
+    - {label: "Shift Tool", name: "shift_url", widget: "string"}
+    - label: "Address"
+      name: "place"
+      widget: "object"
+      fields: 
+        - {label: "Name", name: "name", widget: "string"}
+        - {label: "Address", name: "address", widget: "string"}
+    - label: "Program"
+      name: "program"
+      widget: "object"
+      fields: 
+        - label: "Workshops"
+          name: "workshops"
+          widget: "list"
+          fields:
+            - {label: "Name", name: "name", widget: "string"}
+            - {label: "Start", name: "start", widget: "datetime"}
+            - {label: "End", name: "end", widget: "datetime"}
+            - {label: "Descritption", name: "description", widget: "markdown"}
+        - label: "presentations"
+          name: "presentations"
+          widget: "list"
+          fields:
+            - {label: "Name", name: "name", widget: "string"}
+            - {label: "Start", name: "start", widget: "datetime"}
+            - {label: "End", name: "end", widget: "datetime"}
+            - {label: "Descritption", name: "description", widget: "markdown"}
+        - label: "music"
+          name: "music"
+          widget: "list"
+          fields:
+            - {label: "Name", name: "name", widget: "string"}
+            - {label: "Start", name: "start", widget: "datetime"}
+            - {label: "End", name: "end", widget: "datetime"}
+            - {label: "Descritption", name: "description", widget: "markdown"}
+
+
