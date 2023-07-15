@@ -114,6 +114,7 @@ module.exports = function(eleventyConfig) {
     }
   });
 
+  eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("scripts");
   eleventyConfig.addPassthroughCopy({"favicons": "."});
