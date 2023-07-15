@@ -5,7 +5,7 @@ title: "Paletti 01"
 status: "CONFIRMED"
 place:
   name: "Niemandsland"
-  address: "Weinbergstraße 46 - Brunswick"
+  address: "Weinbergstraße 46, Braunschweig"
 shift_url: https://signup.com/go/dVsMBtS
 program:
     workshops:
