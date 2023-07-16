@@ -25,7 +25,7 @@ program:
       end: 2023-05-20 19:00:00+02:00
       description: Folge François Bao bei  einer aufschlussreichen Tour über das
         Palettigelände. Er erklärt euch wo ihr hier seid, was hier ganz
-        besonders wächst und lebt. Er erklärt euch auch warum grade hier und
+        besonderes wächst und lebt. Er erklärt euch auch warum grade hier und
         nicht an anderen Orten.
     - name: Kleidertauschparty
       start: 2023-07-22 14:00:00+02:00
@@ -56,7 +56,7 @@ program:
         Wasserkloset oder das altbekannte Dixi. Wir trennen! Dadurch verbrauchen
         wir weniger Wasser und können EU-zugelassenen Biodünger aus Urin
         herstellen. Wie das genau geht und warum das wichtig ist erklärt euch
-        Andy vom Institut für Werkzeugmaschinen und Fertigungstechnik!
+        Andy vom ISWW (Institut für Siedlungswasserwirtschaft)!
       end: 2023-07-15T12:16:50.760Z
     - name: Quizzen und Gewinnen mit Timi Ocean
       start: 2023-05-20 21:00:00+02:00
