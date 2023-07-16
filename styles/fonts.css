@@ -4,7 +4,7 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('/fonts/OpenSans.woff2') format('woff2');
+    src: url('/fonts/open-sans.woff2') format('woff2');
 }
 
 /* open-sans-600 - latin */
@@ -13,7 +13,7 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    src: url('/fonts/OpenSans.woff2') format('woff2');
+    src: url('/fonts/open-sans.woff2') format('woff2');
 }
   
   /* open-sans-700 - latin */
@@ -22,7 +22,7 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    src: url('/fonts/OpenSans.woff2') format('woff2');
+    src: url('/fonts/open-sans.woff2') format('woff2');
 }
   
 
@@ -32,7 +32,7 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 800;
-    src: url('/fonts/OpenSans.woff2') format('woff2');
+    src: url('/fonts/open-sans.woff2') format('woff2');
 }
 
 .headline, h1 {
