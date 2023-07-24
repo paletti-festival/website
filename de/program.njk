@@ -66,9 +66,11 @@ permalink: false
                     {%- for music in next.data.program.music -%}
                         <div class="item">
                             <h4>{{ music.name }}</h4>
+                            {% if music.start %}
                             <div class="time">
                                 {{ music.start | formatTime }}
                             </div>
+                            {% endif %}
                             <p>{{ music.description }}</p>
                         </div>
                     {%- endfor -%}

@@ -56,10 +56,7 @@ module.exports = function(eleventyConfig) {
     let last = null;
 
     for (let event of events) {
-      if (now > event.data.until) {
-        return event;
-      }
-      if (event.data.status === "CONFIRMED") {
+      if (now > event.data.until && event.data.status === "CONFIRMED") {
         last = event;
       }
     }
