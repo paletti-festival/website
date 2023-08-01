@@ -11,6 +11,7 @@
     "html-minifier": "^4.0.0",
     "ics": "^3.1.0",
     "lightningcss": "^1.19.0",
+    "node-html-to-image": "^3.4.0",
     "uglify-js": "^3.17.4"
   },
   "scripts": {

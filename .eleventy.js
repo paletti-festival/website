@@ -5,6 +5,7 @@ const browserslist = require("browserslist");
 const htmlmin = require("html-minifier");
 const path = require("node:path");
 const uglify = require("uglify-js");
+const nodeHtmlToImage = require('node-html-to-image');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
@@ -94,6 +95,19 @@ module.exports = function(eleventyConfig) {
         module: true
       });
       return minified.code;
+    }
+
+    return content;
+  });
+
+  eleventyConfig.addTransform("jsmin", function(content) {
+    if( this.page.outputPath && this.page.outputPath.endsWith(".png") ) {
+      nodeHtmlToImage({
+        output: this.page.outputPath,
+        html: content
+      })
+      .then(() => console.log('The image was created successfully!'))
+      // return;
     }
 
     return content;
