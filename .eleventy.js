@@ -4,6 +4,7 @@ const { bundle, transform, browserslistToTargets } = require("lightningcss");
 const browserslist = require("browserslist");
 const htmlmin = require("html-minifier");
 const path = require("node:path");
+const uglify = require("uglify-js");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
@@ -86,6 +87,17 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+
+  eleventyConfig.addTransform("jsmin", function(content) {
+    if( this.page.outputPath && this.page.outputPath.endsWith(".js") ) {
+      let minified = uglify.minify(content, {
+        module: true
+      });
+      return minified.code;
+    }
+
+    return content;
+  });
 
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {

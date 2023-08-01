@@ -9,7 +9,6 @@
         "paragraph": "Subscribe to our newsletter to stay up to date.",
         "confirmation": "I want to receive the newsletter and accept the privacy policy.",
         "unsubscribe": "You can unsubscribe from our newsletter at any time using the link in our newsletter.",
-        "subscribe": "Subscribe",
-        "field_empty": "This field must not be empty."
+        "subscribe": "Subscribe"
     }
 }
