@@ -76,7 +76,7 @@ module.exports = function(eleventyConfig) {
         collapseBooleanAttributes: true,
         decodeEntities: true,
         minifyURLs: true,
-        removeAttributeQuotes: true,
+        removeAttributeQuotes: false,
         removeComments: true,
         removeEmptyAttributes: true,
         sortAttributes: true,
