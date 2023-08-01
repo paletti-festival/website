@@ -1,0 +1,30 @@
+---
+permalink: og-image.png
+layout: og-image
+---
+{%- set next = collections.dates | nextDate -%}
+{%- if not next -%}
+    {%- set next = collections.dates | lastDate -%}
+    {%- set isPast = true -%}
+{%- endif -%}
+<div class="biglietti">
+    <div class="row">
+        <span class="title">{{ '/images/paletti_icon_inverted.svg' | svgContents | safe}} {{ next.data.title }}</span>
+    </div>
+    <div class="row">
+        <div class="date-time">
+            <span class="date">{{ next.data.date | formatDate}}</span>
+            <span class="time">
+                {{ next.data.date | formatTime}} –
+            {{ next.data.until | formatTime}}
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <span class="address">
+            {% if next.data.place %}
+            {{ next.data.place.name }}               
+            {% endif %}
+        </span>
+    </div>
+</div>

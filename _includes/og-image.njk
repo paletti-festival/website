@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            html {
+                font-size: 150%
+            }
+            body {
+                width: 300px;
+                height: 200px;
+                padding: 5px;
+                font-size: 500%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .biglietti {
+                border-width: 4px!important;
+                font-weight: bold;
+                flex-grow: 1;
+            }
+            .biglietti .title {
+                font-weight: bolder;
+            }
+            .biglietti .row {
+                border-bottom-width: 4!important;
+            }
+            .biglietti::before {
+                --size: 30px!important;
+                transform: translate(-4.5px)!important;
+            }
+        </style>
+        {% set css %}
+            {% include "styles/fonts.css" %}
+            {% include "styles/layout.css" %}
+            {% include "styles/biglietti.css" %}
+        {% endset %}
+        <!-- feed it through our cssmin filter to minify -->
+        <style>
+            {{ css | cssmin | safe }}
+        </style>
+    </head>
+    <body>
+        {{ content | safe }}
+    </body>
+</html>
