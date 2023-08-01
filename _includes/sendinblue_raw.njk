@@ -102,7 +102,7 @@
         </div>
 
         <input type="text" name="email_address_check" value="" class="input--hidden">
-        <input type="hidden" name="locale" value="de">
+        <input type="hidden" name="locale" value="{{ lang }}">
       </form>
     </div>
   </div>
@@ -110,29 +110,8 @@
 <!-- END - We recommend to place the below code where you want the form in your website html  -->
 
 <!-- START - We recommend to place the below code in footer or bottom of your website html  -->
-<script>
-  window.REQUIRED_CODE_ERROR_MESSAGE = 'Wählen Sie bitte einen Ländervorwahl aus.';
-  window.LOCALE = 'de';
-  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfen Sie das Feldformat und versuchen Sie es erneut.";
 
-  window.REQUIRED_ERROR_MESSAGE = "{{newsletter.field_empty}}";
-
-  window.GENERIC_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfen Sie das Feldformat und versuchen Sie es erneut.";
-
-
-
-
-  window.translation = {
-    common: {
-      selectedList: '{quantity} Liste ausgewählt',
-      selectedLists: '{quantity} Listen ausgewählt'
-    }
-  };
-
-  var AUTOHIDE = Boolean(0);
-</script>
-<script defer src="/scripts/main.js"></script>
-
+<script defer src="/scripts/form.js"></script>
 
 <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
 <!-- End Sendinblue Form -->
