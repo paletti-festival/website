@@ -9,8 +9,8 @@ permalink: false
     {% set next = collections.dates | lastDate %}
     {% set isPast = true %}
 {% endif %}
+<h2>Programm</h2>
 {% if next and next.data.program %}
-    <h2>Programm</h2>
     {% if isPast %}
     <div class="program-text">
         Das war das Programm für <b>{{ next.data.title }}</b> am <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.
@@ -78,4 +78,8 @@ permalink: false
             </div>
         {% endif %}
     </div>
+{% else %}
+<div class="program-text">
+    Derzeit basteln und schrauben wir noch am Programm für das <b>{{ next.data.title }}</b> am <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>. Sobald sich hier etwas tut, werden wir dich über unseren <a href="#newsletter">Newsletter</a> informieren.
+</div>
 {% endif %}

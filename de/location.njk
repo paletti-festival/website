@@ -17,5 +17,5 @@ class: wrapper location
     <a href="http://maps.google.com/maps?q={{next.data.place.coordinates}}" class="coords" target="blank">{{ '/images/crosshair.svg' | svgContents | safe}} {{next.data.place.coordinates}}</a>
     {%- endif -%}
     </div>
-    {{ '/images/map.svg' | svgContents | safe}}
+    {# {{ '/images/map.svg' | svgContents | safe}} #}
 {%- endif -%}
