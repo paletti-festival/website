@@ -41,13 +41,14 @@ program:
       description: "Nach ihrem einschlagenden Erfolg konnten wir sie endlich auch für uns gewinnen: Die Trash-Gang des Organic Beats präsentiert ihr legendäres Mega Mülliges Mashup Musik Mbingo auf dem paletti. Mit trashigsten Tunes und freshesten Müllfacts liefert die Gang genau die richtige Energy zum Mülltrennen. Auf keinen Fall verpassen!"
     - name: LateNight Quiz mit Timi Ocean und DJ Fliesentisch
       start: 2023-09-23 22:00:00+02:00
+      description: Nachdem wir bei unseren ersten beiden Palettis jeweils ein Quiz von DJ Fliesentisch und Timi Ocean zu Gast hatten möchten wir dieses mal die Fusion! Beim Paletti Nummer 3 geben sich die beiden im Duett! Doppelte Power und jede Menge lehrreicher Spaß!
   music:
-    - start: 2023-09-23 16:00:00+02:00
-      end: 2023-09-23 16:45:00+02:00
-      name: Blaupause
+    - start: 2023-09-23 15:00:00+02:00
+      end: 2023-09-23 16:35:00+02:00
+      name: Easecy
       description:
-        Blaupause machen Musik zwischen Kopf und Herz mit viel Gefühl. Der Mix aus den unterschiedlichsten Musikrichtungen, aus den die einzelnen Bandmitglieder entstammen, ergibt ihren Stil, eine Mischung aus Powerpop / melodischen Pop-Rock. Ihre einprägsamen Melodien und Texte bleiben im Ohr und ihre Live Auftritte im Kopf.
-    - start: 2023-09-23 17:00:00+02:00
+        Easecy leutet mit entspannten Klängen das letzte Paletti des Jahres für euch ein. Mit smoothen 105 BPM, netten Tunes und einer Menge guter Vibes versüßt er euch den Nachmittag.
+    - start: 2023-09-23 16:30:00+02:00
       end: 2023-09-23 18:00:00+02:00
       name: Flidar
       description:
