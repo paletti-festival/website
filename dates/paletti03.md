@@ -45,7 +45,7 @@ program:
   music:
     - start: 2023-09-23 15:00:00+02:00
       end: 2023-09-23 16:35:00+02:00
-      name: Easecy
+      name: Easeci
       description:
         Easecy leutet mit entspannten Klängen das letzte Paletti des Jahres für euch ein. Mit smoothen 105 BPM, netten Tunes und einer Menge guter Vibes versüßt er euch den Nachmittag.
     - start: 2023-09-23 16:30:00+02:00
