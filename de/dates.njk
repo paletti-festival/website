@@ -3,10 +3,12 @@ date: 2023-05-08
 tags: main
 permalink: false
 ---
-<h2>Termine</h2>
-
-<div class="biglietti-list">
-{%- for post in collections.dates -%}
+{% set thisYearDates = collections.dates | thisYear %}
+{%- for post in thisYearDates -%}
+    {% if loop.first %}
+    <h2>Termine</h2>
+    <div class="biglietti-list">
+    {% endif %}
     <div class="biglietti">
         <div class="row">
             <span class="title">{{ '/images/paletti_icon_inverted.svg' | svgContents | safe}} {{ post.data.title }}</span>
@@ -32,5 +34,7 @@ permalink: false
             </span>
         </div>
     </div>
+    {% if loop.last %}
+    </div>
+    {% endif %}
 {%- endfor -%}
-</div>

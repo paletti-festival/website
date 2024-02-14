@@ -58,12 +58,28 @@ module.exports = function(eleventyConfig) {
     let last = null;
 
     for (let event of events) {
-      if (now > event.data.until && event.data.status === "CONFIRMED") {
+      const evenEnd = new Date(event.data.until);
+      const eventEndPlusTwoMonth = new Date(evenEnd.setMonth(evenEnd.getMonth() + 2))
+
+      if (now > event.data.until && eventEndPlusTwoMonth > now && event.data.status === "CONFIRMED") {
         last = event;
       }
     }
 
     return last;
+  });
+
+  eleventyConfig.addFilter("thisYear", async function(events) {
+    const now = new Date();
+    let thisYear = [];
+
+    for (let event of events) {
+      if (event.data.until.getFullYear() == now.getFullYear()) {
+        thisYear.push(event)
+      }
+    }
+
+    return thisYear;
   });
 
   eleventyConfig.addTransform("htmlmin", function(content) {
