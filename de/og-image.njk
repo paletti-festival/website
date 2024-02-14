@@ -7,6 +7,7 @@ layout: og-image
     {%- set next = collections.dates | lastDate -%}
     {%- set isPast = true -%}
 {%- endif -%}
+{%- if next -%}
 <div class="biglietti">
     <div class="row">
         <span class="title">{{ '/images/paletti_icon_inverted.svg' | svgContents | safe}} {{ next.data.title }}</span>
@@ -28,3 +29,4 @@ layout: og-image
         </span>
     </div>
 </div>
+{%- endif -%}

@@ -9,77 +9,79 @@ permalink: false
     {% set next = collections.dates | lastDate %}
     {% set isPast = true %}
 {% endif %}
+{% if next %}
 <h2>Programm</h2>
-{% if next and next.data.program %}
-    {% if isPast %}
-    <div class="program-text">
-        Das war das Programm für <b>{{ next.data.title }}</b> am <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.
-    </div>
+    {% if next.data.program %}
+        {% if isPast %}
+        <div class="program-text">
+            Das war das Programm für <b>{{ next.data.title }}</b> am <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.
+        </div>
+        {% else %}
+        <div class="program-text">
+            Das Programm für <b>{{ next.data.title }}</b> am <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.
+        </div>
+        {% endif %}
+        <div class="program">
+            {% if next.data.program.workshops %}
+                <div class="category">
+                    <div class="headline-container">
+                        <h3>Workshops</h3>
+                    </div>
+                    <div class="items">
+                        {%- for workshop in next.data.program.workshops -%}
+                            <div class="item">
+                                <h4>{{ workshop.name }}</h4>
+                                <div class="time">
+                                    {{ workshop.start | formatTime }} – {{ workshop.end | formatTime }}
+                                </div>
+                                <p>{{ workshop.description }}</p>
+                            </div>
+                        {%- endfor -%}
+                    </div>
+                </div>
+            {% endif %}
+            {% if next.data.program.presentations %}
+                <div class="category">
+                    <div class="headline-container">
+                        <h3>Vorträge</h3>
+                    </div>
+                    <div class="items">
+                        {%- for presentation in next.data.program.presentations -%}
+                            <div class="item">
+                                <h4>{{ presentation.name }}</h4>
+                                <div class="time">
+                                    {{ presentation.start | formatTime }}
+                                </div>
+                                <p>{{ presentation.description }}</p>
+                            </div>
+                        {%- endfor -%}
+                    </div>
+                </div>
+            {% endif %}
+            {% if next.data.program.music %}
+                <div class="category">
+                    <div class="headline-container">
+                        <h3>Musik</h3>
+                    </div>
+                    <div class="items">
+                        {%- for music in next.data.program.music -%}
+                            <div class="item">
+                                <h4>{{ music.name }}</h4>
+                                {% if music.start %}
+                                <div class="time">
+                                    {{ music.start | formatTime }}
+                                </div>
+                                {% endif %}
+                                <p>{{ music.description }}</p>
+                            </div>
+                        {%- endfor -%}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
     {% else %}
     <div class="program-text">
-        Das Programm für <b>{{ next.data.title }}</b> am <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.
+        Derzeit basteln und schrauben wir noch am Programm für das <b>{{ next.data.title }}</b> am <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>. Sobald sich hier etwas tut, werden wir dich über unseren <a href="#newsletter">Newsletter</a> informieren.
     </div>
     {% endif %}
-    <div class="program">
-        {% if next.data.program.workshops %}
-            <div class="category">
-                <div class="headline-container">
-                    <h3>Workshops</h3>
-                </div>
-                <div class="items">
-                    {%- for workshop in next.data.program.workshops -%}
-                        <div class="item">
-                            <h4>{{ workshop.name }}</h4>
-                            <div class="time">
-                                {{ workshop.start | formatTime }} – {{ workshop.end | formatTime }}
-                            </div>
-                            <p>{{ workshop.description }}</p>
-                        </div>
-                    {%- endfor -%}
-                </div>
-            </div>
-        {% endif %}
-        {% if next.data.program.presentations %}
-            <div class="category">
-                <div class="headline-container">
-                    <h3>Vorträge</h3>
-                </div>
-                <div class="items">
-                    {%- for presentation in next.data.program.presentations -%}
-                        <div class="item">
-                            <h4>{{ presentation.name }}</h4>
-                            <div class="time">
-                                {{ presentation.start | formatTime }}
-                            </div>
-                            <p>{{ presentation.description }}</p>
-                        </div>
-                    {%- endfor -%}
-                </div>
-            </div>
-        {% endif %}
-        {% if next.data.program.music %}
-            <div class="category">
-                <div class="headline-container">
-                    <h3>Musik</h3>
-                </div>
-                <div class="items">
-                    {%- for music in next.data.program.music -%}
-                        <div class="item">
-                            <h4>{{ music.name }}</h4>
-                            {% if music.start %}
-                            <div class="time">
-                                {{ music.start | formatTime }}
-                            </div>
-                            {% endif %}
-                            <p>{{ music.description }}</p>
-                        </div>
-                    {%- endfor -%}
-                </div>
-            </div>
-        {% endif %}
-    </div>
-{% else %}
-<div class="program-text">
-    Derzeit basteln und schrauben wir noch am Programm für das <b>{{ next.data.title }}</b> am <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>. Sobald sich hier etwas tut, werden wir dich über unseren <a href="#newsletter">Newsletter</a> informieren.
-</div>
 {% endif %}
