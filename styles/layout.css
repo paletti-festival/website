@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html:focus-within {
     scroll-behavior: smooth;
 }
@@ -273,8 +277,8 @@ button, .button {
     padding: 3px;
     transition: all 0.4s ease;
     display: block;
-    width: 3em;
-    height: 1.5em;
+    width: 3.3em;
+    height: 1.8em;
     position: relative;
     cursor: pointer;
     user-select: none;
