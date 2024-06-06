@@ -25,7 +25,7 @@ program:
       end: 2024-06-08 17:00:00+02:00
       name: "Comic und Zine Workshop"
       description: "Wie lassen sich auf einfache Art Bild und Text zum Geschichtenerzählen verknüpfen?
-        Was ist ein Zine und wie kann ein Zine aus einem Gedicht oder der Lieblings-Songzeile entstehen? Alles dies kannst du in diesem Workshop erkunden und ausprobieren. Im Workshop kannst du gemeinsam mit Cindy kleine Comic-Strips basteln. 
+        Was ist ein Zine und wie kann ein Zine aus einem Gedicht oder der Lieblings-Songzeile entstehen? Alles dies kannst du in diesem Workshop erkunden und ausprobieren. Im Workshop kannst du gemeinsam mit Lucie kleine Comic-Strips basteln. 
         Dafür brauchst du keine Vorerfahrungen. Komm vorbei!"
   music:
     - start: 2024-06-08 15:30:00+02:00
