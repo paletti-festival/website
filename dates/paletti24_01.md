@@ -50,5 +50,5 @@ program:
     - start: 2024-06-08 00:45:00+02:00
       end: 2023-06-09 02:15:00+02:00
       name: "Molten Timbre"
-      description: "Bereit für düsteren Peaktime Techno? DJ Molten Timbre bringt kraftvolle, hypnotische Beats auf die Bühne! Erlebe intensive Klänge und pulsierende Rhythmen, die die Tanzfläche zum Beben bringen."
+      description: "Bereit für Psychedelic Techno?  Molten Timbre kann euch mit einer Mischung aus hypnotisch-minimalistischen und psychedelischen Klängen sowie treibenden oder groovigen Beats begeistern. Seine musikalische Reise entführt euch in fesselnde Klanglandschaften, die zum Tanzen und Träumen einladen."
 ---
