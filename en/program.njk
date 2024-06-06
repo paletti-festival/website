@@ -15,7 +15,9 @@ permalink: false
     {% if isPast %}
         <div class="program-text">
             That was the program for <b>{{ next.data.title }}</b> on <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.<br>
-            All workshops and talks were held in german language.        </div>
+            All workshops and talks were held in german language. <br>
+            As always, we will provide something tasty to eat in the afternoon.
+            </div>
     {% else %}
         <div class="program-text">
             The program for <b>{{ next.data.title }}</b> on <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.<br>
