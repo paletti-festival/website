@@ -9,7 +9,8 @@
         <style>
             {{ css | cssmin | safe }}
             html {
-                font-size: 160%
+                font-size: 160%;
+                padding: 5px;
             }
             body {
                 width: 300px;
@@ -25,6 +26,7 @@
                 flex-grow: 1;
                 margin: 5px;
                 font-size: 1rem;
+                max-width: 100%;
             }
             .biglietti .title {
                 font-weight: bolder;
