@@ -1,6 +1,7 @@
+{% set next = collections.dates | nextDate %}
 <meta name="description" content="{{ description }}">
 <meta property="og:title" content="{{ title }}" />
-<meta property="og:description" content="{{ description }}" />
+<meta property="og:description" content="{{ description }}{% if next %} Next Paletti: {{ next.date | formatDate}} – {{ next.data.place.name }}{% endif %}" />
 <meta property="og:image" content="https://www.paletti.info/og-image.png" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.paletti.info{{ page.url }}">
