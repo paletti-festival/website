@@ -43,6 +43,7 @@ program:
     - start: 2024-06-08 21:45:00+02:00
       end: 2023-06-08 23:15:00+02:00
       name: "DJ Potzblitz"
+      description: "Die Retroelektromagie von Potzblitz entführt dich auf eine Zeitreise durch die pulsierenden Synthesizer-Klänge der 80 Jahre. Der virtuose Mix aus nostalgischen Beats, hypnotischen Melodien und elektrisierenden Rhythmen lässt die Tanzfläche zusammen mit deinen Tanzeinlagen erbeben. Wie eine Reise in ein pixeliges Videospiel, bei dem du den Highscore der shiny Vibes knacken kannst. Ob du ein Kind der 80er bist oder einfach nur den Groove der Vergangenheit liebst, du wirst es fühlen: Potzblitz, its a magic musicmatch!"
     - start: 2024-06-08 23:15:00+02:00
       end: 2023-06-09 00:45:00+02:00
       name: "YummyBaby"
