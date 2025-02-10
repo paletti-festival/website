@@ -10,8 +10,8 @@ permalink: false
     {% set isPast = true %}
 {% endif %}
 {% if next %}
+ <h2>Program</h2>
     {% if next.data.program %}
-    <h2>Program</h2>
     {% if isPast %}
         <div class="program-text">
             That was the program for <b>{{ next.data.title }}</b> on <b>{{ next.date | formatDate }}, {{ next.data.place.name }}</b>.<br>
