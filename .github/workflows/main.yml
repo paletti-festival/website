@@ -10,24 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: ⏰ Set timezone
-      uses: szenius/set-timezone@v1.2
+      uses: szenius/set-timezone@v2.0
       with:
         timezoneLinux: "Europe/Berlin"
     - name: 🚚 Get latest code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Use Node.js 19
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '19.x'
       
     - name: 🔨 Build Project
       run: |
-        yarn install
+        yarn install --frozen-lockfile
         yarn run build
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.server }}
         username: ${{ secrets.user }}
