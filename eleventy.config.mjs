@@ -1,13 +1,16 @@
-const { EleventyI18nPlugin } = require("@11ty/eleventy");
-const svgContents = require("eleventy-plugin-svg-contents");
-const { bundle, transform, browserslistToTargets } = require("lightningcss");
-const browserslist = require("browserslist");
-const htmlmin = require("html-minifier");
-const path = require("node:path");
-const uglify = require("uglify-js");
-const nodeHtmlToImage = require('node-html-to-image');
+import { EleventyI18nPlugin }from "@11ty/eleventy";
 
-module.exports = function(eleventyConfig) {
+import svgContents from "eleventy-plugin-svg-contents";
+import { bundle, transform, browserslistToTargets } from "lightningcss";
+import browserslist from "browserslist";
+import htmlmin from "html-minifier";
+import path from "node:path";
+import uglify from "uglify-js";
+import nodeHtmlToImage from 'node-html-to-image';
+
+export default function (eleventyConfig) {
+
+
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "de",
   });
@@ -41,7 +44,7 @@ module.exports = function(eleventyConfig) {
     return date.toLocaleTimeString('de-DE', {hour: "2-digit", minute: "2-digit"});
   });
 
-  eleventyConfig.addFilter("nextDate", async function(events) {
+  eleventyConfig.addAsyncFilter("nextDate", async function(events) {
     const now = new Date();
 
     for (let event of events) {
@@ -53,7 +56,7 @@ module.exports = function(eleventyConfig) {
     return null;
   });
 
-  eleventyConfig.addFilter("lastDate", async function(events) {
+  eleventyConfig.addAsyncFilter("lastDate", async function(events) {
     const now = new Date();
     let last = null;
 
@@ -69,7 +72,7 @@ module.exports = function(eleventyConfig) {
     return last;
   });
 
-  eleventyConfig.addFilter("thisYear", async function(events) {
+  eleventyConfig.addFilter("thisYear", function(events) {
     const now = new Date();
     let thisYear = [];
 
