@@ -7,8 +7,9 @@ shift_url: https://signup.com/go/nnyyvpN
 place:
   name: "Niemandsland"
   address: "Weinbergstraße 46, Braunschweig"
-  description: "Wie schon bei der ersten Ausgabe sind wir mit dem Paletti 03 auch dieses Mal im Niemandsland zu Besuch. Das Niemandsland befindet sich bei der Weinbergstraße 64."
-  description_en: "As with the first edition, we are visiting the Niemandsland with the Paletti 03 this time as well. The Niemandsland is located at Weinbergstraße 64."
+  description:
+    de: "Wie schon bei der ersten Ausgabe sind wir mit dem Paletti 03 auch dieses Mal im Niemandsland zu Besuch. Das Niemandsland befindet sich bei der Weinbergstraße 64."
+    en: "As with the first edition, we are visiting the Niemandsland with the Paletti 03 this time as well. The Niemandsland is located at Weinbergstraße 64."
   coordinates: 52.258417, 10.495477
 program:
   workshops:

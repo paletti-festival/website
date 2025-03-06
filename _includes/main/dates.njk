@@ -1,0 +1,35 @@
+{% set thisYearDates = collections.dates | thisYear %}
+{%- for post in thisYearDates -%}
+    {% if loop.first %}
+    <h2>{{"dates" | i18n}}</h2>
+    <div class="biglietti-list">
+    {% endif %}
+        <div class="biglietti">
+            <div class="row">
+                <span class="title">{{ '/images/paletti_icon_inverted.svg' | svgContents | safe}} {{ post.data.title }}</span>
+            </div>
+            <div class="row">
+                <div class="date-time">
+                    <span class="date">{{ post.data.date | formatDate }}</span>
+                    <span class="time">
+                        {{ post.data.date | formatTime }} –
+                        {{ post.data.until | formatTime }}
+                    </span>
+                </div>
+                <span class="text">
+                    {{"free entrance" | i18n}}<br>
+                    {{"donation welcome" | i18n}}
+                </span>
+            </div>
+            <div class="row">
+                <span class="address">
+                    {% if post.data.place %}
+                    {{ post.data.place.name }}<br>{{ post.data.place.address }}                
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+    {% if loop.last %}
+    </div>
+    {% endif %}
+{%- endfor -%}

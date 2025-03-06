@@ -7,10 +7,9 @@ shift_url: https://signup.com/go/hquhHjt
 place:
   name: Garten Lebenshilfe
   address: Spargelstraße 6, Braunschweig
-  description: "Versteckt zwischen Schrebergärten findet das Paletti 02 im Garten der Lebenshilfe
-    Braunschweig statt. Auf das Gelände kommt ihr über die Spargelstraße.
-    Der Eingang befindet sich zwischen Freyastraße und Wodanstraße."
-  description_en: "Hidden between garden plots the Paletti 02 takes place in the garden of the Lebenshilfe Braunschweig takes place. You can get to the site via Spargelstraße. The entrance is located between Freyastraße and Wodanstraße."
+  description:
+    de: "Versteckt zwischen Schrebergärten findet das Paletti 02 im Garten der Lebenshilfe Braunschweig statt. Auf das Gelände kommt ihr über die Spargelstraße.Der Eingang befindet sich zwischen Freyastraße und Wodanstraße."
+    en: "Hidden between garden plots the Paletti 02 takes place in the garden of the Lebenshilfe Braunschweig takes place. You can get to the site via Spargelstraße. The entrance is located between Freyastraße and Wodanstraße."
   coordinates: 52.2832, 10.5312
 program:
   workshops:

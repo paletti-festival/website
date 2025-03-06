@@ -1,0 +1,15 @@
+{%- set next = collections.dates | nextDate -%}
+{%- if not next -%}
+    {%- set next = collections.dates | lastDate -%}
+    {%- set isPast = true -%}
+{%- endif -%}
+{%- if next and next.data.place and next.data.place.description %}
+    <div>
+        <h2>{{ "location" | i18n  }}</h2>
+        <p>{{ next.data.place.description[lang] }}</p>
+        {% if next.data.place.coordinates -%}
+        <a href="http://maps.google.com/maps?q={{next.data.place.coordinates}}" class="coords" target="blank">{{ '/images/crosshair.svg' | svgContents | safe}} {{next.data.place.coordinates}}</a>
+        {%- endif -%}
+    </div>
+    {# {{ '/images/map.svg' | svgContents | safe}} #}
+{%- endif -%}
