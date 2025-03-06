@@ -1,0 +1,9 @@
+{% set next = collections.dates | nextDate %}
+{% if next and next.data.shift_url%}
+<h2 class="help-text">+++ Help +++ Help +++ Help +++ Help +++ Help +++ Help +++ Help +++ Help +++ Help +++ Help +++</h2>
+<p>
+    {{ "help.text" | i18n | safe }}
+</p>
+<a class="button" href="{{ next.data.shift_url }}">{{ "help.button" | i18n }}</a>
+<p class="help-text">+++ Help +++ Help +++ Help +++ Help +++ Help +++ Help +++ Help +++ Help +++ Help +++ Help +++</p>
+{% endif %}

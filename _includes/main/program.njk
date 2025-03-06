@@ -1,0 +1,86 @@
+{% set next = collections.dates | nextDate %}
+{% if not next %}
+    {% set next = collections.dates | lastDate %}
+    {% set isPast = true %}
+{% endif %}
+{% if next %}
+{% set date = next.date | formatDate %}
+{% set title =  next.data.title %}
+{% set place = next.data.place %}
+
+<h2>{{"program" | i18n }}</h2>
+
+{% if next.data.program %}
+    {% if isPast %}
+    <div class="program-text">
+        {{ "program.past" | i18n({title: title, place: place.name, date: date }) | safe }}
+    </div>
+    {% else %}
+    <div class="program-text">
+        {{ "program.planned" | i18n({title: title, place: place.name, date: date }) | safe }}
+    </div>
+    {% endif %}
+    <div class="program">
+        {% if next.data.program.workshops %}
+            <div class="category">
+                <div class="headline-container">
+                    <h3>{{ "workshops" | i18n }}</h3>
+                </div>
+                <div class="items">
+                    {%- for workshop in next.data.program.workshops -%}
+                        <div class="item">
+                            <h4>{{ workshop.name }}</h4>
+                            <div class="time">
+                                {{ workshop.start | formatTime }} – {{ workshop.end | formatTime }}
+                            </div>
+                            <p>{{ workshop.description }}</p>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        {% endif %}
+        {% if next.data.program.presentations %}
+            <div class="category">
+                <div class="headline-container">
+                    <h3>{{ "talks" | i18n}}</h3>
+                </div>
+                <div class="items">
+                    {%- for presentation in next.data.program.presentations -%}
+                        <div class="item">
+                            <h4>{{ presentation.name }}</h4>
+                            <div class="time">
+                                {{ presentation.start | formatTime }}
+                            </div>
+                            <p>{{ presentation.description }}</p>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        {% endif %}
+        {% if next.data.program.music %}
+            <div class="category">
+                <div class="headline-container">
+                    <h3>{{ "music" | i18n}}</h3>
+                </div>
+                <div class="items">
+                    {%- for music in next.data.program.music -%}
+                        <div class="item">
+                            <h4>{{ music.name }}</h4>
+                            {% if music.start %}
+                            <div class="time">
+                                {{ music.start | formatTime }}
+                            </div>
+                            {% endif %}
+                            <p>{{ music.description }}</p>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% else %}
+<div class="program-text">
+    {{ "program.future" | i18n({title: title, place: place.name, date: date }) | safe }}
+</div>
+{% endif %}
+{% endif %}

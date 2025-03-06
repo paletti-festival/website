@@ -4,16 +4,18 @@ layout: base
 <section class="start wrapper">
     {{ content | safe }}
 </section>
-{%- for post in collections.main | reverse -%}
-{% if post.data.lang == page.lang %}
-    <section
-    {% if post.data.class %}
-    class="{{ post.data.class }}"
-    {% else %}
-    class="wrapper"
-    {% endif %}
-    >
-    {{ post.content | safe}}
-    </section>
-{% endif %}
-{%- endfor -%}
+<section class="wrapper location">
+    {% include 'main/location.njk' %}
+</section>
+<section class="wrapper">
+    {% include 'main/program.njk' %}
+</section>
+<section class="wrapper help">
+    {% include 'main/help.njk' %}
+</section>
+<section class="wrapper">
+    {% include 'main/dates.njk' %}
+</section>
+<section class="wrapper">
+    {% include 'main/newsletter.njk' %}
+</section>

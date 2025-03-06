@@ -7,12 +7,21 @@ import htmlmin from "html-minifier";
 import path from "node:path";
 import uglify from "uglify-js";
 import nodeHtmlToImage from 'node-html-to-image';
+import i18n from "eleventy-plugin-i18n";
+import translations from "./_data/i18n/index.mjs";
 
 export default function (eleventyConfig) {
 
 
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "de",
+  });
+
+  eleventyConfig.addPlugin(i18n, {
+    translations,
+    fallbackLocales: {
+      "en": "de",
+    },
   });
 
   eleventyConfig.addPlugin(svgContents);
