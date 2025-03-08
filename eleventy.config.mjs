@@ -12,11 +12,12 @@ import translations from "./_data/i18n/index.mjs";
 
 export default function (eleventyConfig) {
 
-
+  // Language plugin that handles i18n links
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "de",
   });
 
+  // i18n plugin that handles translations
   eleventyConfig.addPlugin(i18n, {
     translations,
     fallbackLocales: {
