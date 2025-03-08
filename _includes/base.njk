@@ -4,7 +4,7 @@ title: Paletti
 <!doctype html>
 <html lang="{{ page.lang }}">
   <head>
-    {% include 'head.njk' %}
+    {% include 'head/head.njk' %}
   </head>
   <body>
     <script>
@@ -14,11 +14,11 @@ title: Paletti
       } else if (currentTheme == "light") {
           document.body.classList.add("light-theme");
       }
-  </script>
+    </script>
     <header>
       <div class="wrapper">
         <nav>
-            {% include 'nav.njk' %}
+            {% include 'nav/nav.njk' %}
         </nav>
       </div>
     </header>
