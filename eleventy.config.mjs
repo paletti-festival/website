@@ -11,6 +11,9 @@ import i18n from "eleventy-plugin-i18n";
 import translations from "./_data/i18n/index.mjs";
 
 export default function (eleventyConfig) {
+  /*
+   * Plugins
+   */
 
   // Language plugin that handles i18n links
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
@@ -25,8 +28,14 @@ export default function (eleventyConfig) {
     },
   });
 
+  // Plugin that allows to include SVG files
   eleventyConfig.addPlugin(svgContents);
 
+  /*
+   * Cutsom filters
+   */
+
+  // Filter to minify CSS
   eleventyConfig.addFilter("cssmin", function(code) {
     let targets = browserslistToTargets(browserslist("defaults"));
 
@@ -38,6 +47,7 @@ export default function (eleventyConfig) {
     }).code;
   });
 
+  // Filter to format dates depending on the language
   eleventyConfig.addFilter("formatDate", function(date) {
     if (this.ctx?.lang == "en") {
       return date.toLocaleDateString('en-EN', {day: "2-digit", month: "short", year: "numeric"});
@@ -46,6 +56,7 @@ export default function (eleventyConfig) {
     return date.toLocaleDateString('de-DE', {day: "2-digit", month: "short", year: "numeric"});
   });
 
+  // Filter to format times depending on the language
   eleventyConfig.addFilter("formatTime", function(date) {
     if (this.ctx?.lang == "en") {
       return date.toLocaleTimeString('en-EN', {hour: "2-digit"});
@@ -54,6 +65,7 @@ export default function (eleventyConfig) {
     return date.toLocaleTimeString('de-DE', {hour: "2-digit", minute: "2-digit"});
   });
 
+  // Filter to get next event
   eleventyConfig.addAsyncFilter("nextDate", async function(events) {
     const now = new Date();
 
@@ -66,6 +78,7 @@ export default function (eleventyConfig) {
     return null;
   });
 
+  // Filter to get last event
   eleventyConfig.addAsyncFilter("lastDate", async function(events) {
     const now = new Date();
     let last = null;
@@ -82,6 +95,7 @@ export default function (eleventyConfig) {
     return last;
   });
 
+  // Filter to get all events of this year
   eleventyConfig.addFilter("thisYear", function(events) {
     const now = new Date();
     let thisYear = [];
@@ -95,6 +109,11 @@ export default function (eleventyConfig) {
     return thisYear;
   });
 
+  /*
+   * Transforms
+   */
+
+  // Transform to minify HTML
   eleventyConfig.addTransform("htmlmin", function(content) {
     if( this.page.outputPath && this.page.outputPath.endsWith(".html") ) {
       let minified = htmlmin.minify(content, {
@@ -118,6 +137,7 @@ export default function (eleventyConfig) {
   });
 
 
+  // Transform to minify JS
   eleventyConfig.addTransform("jsmin", function(content) {
     if( this.page.outputPath && this.page.outputPath.endsWith(".js") ) {
       let minified = uglify.minify(content, {
@@ -129,18 +149,7 @@ export default function (eleventyConfig) {
     return content;
   });
 
-  eleventyConfig.addTransform("imagepreview", function(content) {
-    if( this.page.outputPath && this.page.outputPath.endsWith(".png") ) {
-      nodeHtmlToImage({
-        output: this.page.outputPath,
-        html: content
-      })
-      .then(() => console.log('The image was created successfully!'))
-    }
-
-    return content;
-  });
-
+  // Transform to minify CSS
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
     outputFileExtension: "css",
@@ -165,8 +174,21 @@ export default function (eleventyConfig) {
     }
   });
 
+  // Transform to create image previews
+  eleventyConfig.addTransform("imagepreview", function(content) {
+    if( this.page.outputPath && this.page.outputPath.endsWith(".png") ) {
+      nodeHtmlToImage({
+        output: this.page.outputPath,
+        html: content
+      })
+      .then(() => console.log('The image was created successfully!'))
+    }
+
+    return content;
+  });
+
   eleventyConfig.addPassthroughCopy("admin");
-  eleventyConfig.addPassthroughCopy("fonts");
-  eleventyConfig.addPassthroughCopy("scripts");
-  eleventyConfig.addPassthroughCopy({"favicons": "."});
+  eleventyConfig.addPassthroughCopy({"assets/fonts": "fonts"});
+  eleventyConfig.addPassthroughCopy({"assets/scripts": "scripts"});
+  eleventyConfig.addPassthroughCopy({"assets/favicons": "."});
 };
