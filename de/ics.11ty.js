@@ -9,10 +9,6 @@ module.exports = class {
         }
     }
 
-    toDateTimeArray(date) {
-        return [date.getFullYear(), date.getMonth() + 1, date.getDate(), date.getHours(), date.getMinutes()];
-    }
-
     toDescription({name, start, end, description}) {
         let desc = name + "\n";
 
@@ -37,15 +33,14 @@ module.exports = class {
 
             const event = {
                 title,
-                start: this.toDateTimeArray(date),
-                end: this.toDateTimeArray(until),
+                start: date.getTime(),
+                end: until.getTime(),
                 startOutputType: "local",
                 calName: "Paletti Kleinfestival"
             }
 
-            if (place) {
-                event.location = place.name +  ", " +  place.address
-            }
+            if (place)
+                event.location = `${place.name}, ${place.address}`
 
             if (program) {
                 let description = "";
