@@ -5,15 +5,15 @@
   "private": true,
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "browserslist": "^4.21.5",
+    "browserslist": "^4.24.4",
     "check-html-links": "^0.2.4",
     "eleventy-plugin-i18n": "^0.1.3",
     "eleventy-plugin-svg-contents": "^0.7.0",
     "html-minifier": "^4.0.0",
-    "ics": "^3.1.0",
-    "lightningcss": "^1.19.0",
+    "ics": "^3.8.1",
+    "lightningcss": "^1.29.2",
     "node-html-to-image": "^5.0.0",
-    "uglify-js": "^3.17.4"
+    "uglify-js": "^3.19.3"
   },
   "scripts": {
     "check": "check-html-links _site",
