@@ -36,11 +36,11 @@ export default function (eleventyConfig) {
    */
 
   // Filter to minify CSS
-  eleventyConfig.addFilter("cssmin", function(code) {
+  eleventyConfig.addFilter("cssmin", function(inputPath) {
     let targets = browserslistToTargets(browserslist("defaults"));
 
-    return transform({
-      code: Buffer.from(code),
+    return bundle({
+      filename: inputPath,
       minify: true,
       sourceMap: true,
       targets

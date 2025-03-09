@@ -5,17 +5,6 @@
 
 {% include 'head/seo-meta.njk' %}
 {% include 'head/hreflang.njk' %}
-{% set css %}
-    {% include "assets/styles/fonts.css" %}
-    {% include "assets/styles/layout.css" %}
-    {% include "assets/styles/biglietti.css" %}
-    {% include "assets/styles/program.css" %}
-    {% include "assets/styles/help.css" %}
-    {% include "assets/styles/header-teaser.css" %}
-    {% include "assets/styles/location.css" %}
-{% endset %}
-<!-- feed it through our cssmin filter to minify -->
-
 <style>
-    {{ css | cssmin | safe }}
+    {{ "assets/styles/main.css" | cssmin | safe }}
 </style>

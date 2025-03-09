@@ -1,13 +1,7 @@
 <html>
     <head>
-        {% set css %}
-            {% include "assets/styles/fonts.css" %}
-            {% include "assets/styles/layout.css" %}
-            {% include "assets/styles/biglietti.css" %}
-        {% endset %}
-        <!-- feed it through our cssmin filter to minify -->
         <style>
-            {{ css | cssmin | safe }}
+            {{ "assets/styles/main.css" | cssmin | safe }}
             html {
                 font-size: 160%;
                 padding: 5px;
