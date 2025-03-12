@@ -1,6 +1,9 @@
 local_backend: true
 locale: 'de'
 
+editor:
+  preview: false
+
 backend:
   name: github
   repo: paletti-festival/website
@@ -10,24 +13,30 @@ media_folder: "static"
 
 collections:
 - name: "dates"
-  label: "Dates"
+  label: "Event"
   folder: "dates"
   create: true
   slug: "{{slug}}"
   fields:
-    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Eventname", name: "title", widget: "string"}
     - {label: "Start", name: "date", widget: "datetime"}
-    - {label: "End", name: "until", widget: "datetime"}
-    - {label: "Status", name: "status", widget: "select", options: ["CONFIRMED", "TENTATIVE"]}
-    - {label: "Shift Tool", name: "shift_url", widget: "string"}
-    - label: "Address"
+    - {label: "Ende", name: "until", widget: "datetime"}
+    - {label: "Status", name: "status", widget: "select", options: [{label: "Bestätigt", value: "CONFIRMED"}, {label: "Vorläufig", value: "TENTATIVE"}]}
+    - {label: "Link für Schichten", name: "shift_url", widget: "string", required: false}
+    - label: "Addresse"
       name: "place"
       widget: "object"
       fields: 
-        - {label: "Name", name: "name", widget: "string"}
-        - {label: "Address", name: "address", widget: "string"}
-        - {label: "Descritption", name: "description", widget: "markdown"}
-    - label: "Program"
+        - {label: "Bezeichnung", name: "name", widget: "string"}
+        - {label: "Postadresse", name: "address", widget: "string"}
+        - {label: "Koordinaten", name: "coordinates", widget: "string"}
+        - label: "Kurzbeschreibung"
+          name: "description"
+          widget: "object"
+          fields:
+            - {label: "deutsch", name: "de", widget: "markdown"}
+            - {label: "englisch", name: "en", widget: "markdown"}
+    - label: "Programm"
       name: "program"
       widget: "object"
       fields: 
@@ -35,25 +44,55 @@ collections:
           name: "workshops"
           widget: "list"
           fields:
-            - {label: "Name", name: "name", widget: "string"}
+            - {label: "Titel", name: "name", widget: "string"}
             - {label: "Start", name: "start", widget: "datetime"}
-            - {label: "End", name: "end", widget: "datetime"}
-            - {label: "Descritption", name: "description", widget: "markdown"}
-        - label: "presentations"
+            - {label: "Ende", name: "end", widget: "datetime"}
+            - {label: "Beschreibung", name: "description", widget: "markdown"}
+        - label: "Vorträge"
           name: "presentations"
           widget: "list"
           fields:
-            - {label: "Name", name: "name", widget: "string"}
+            - {label: "Titel", name: "name", widget: "string"}
             - {label: "Start", name: "start", widget: "datetime"}
-            - {label: "End", name: "end", widget: "datetime"}
-            - {label: "Descritption", name: "description", widget: "markdown"}
-        - label: "music"
+            - {label: "Ende", name: "end", widget: "datetime", required: false}
+            - {label: "Beschreibung", name: "description", widget: "markdown"}
+        - label: "Musik"
           name: "music"
           widget: "list"
           fields:
-            - {label: "Name", name: "name", widget: "string"}
+            - {label: "Titel", name: "name", widget: "string"}
             - {label: "Start", name: "start", widget: "datetime"}
-            - {label: "End", name: "end", widget: "datetime"}
-            - {label: "Descritption", name: "description", widget: "markdown"}
-
-
+            - {label: "Ende", name: "end", widget: "datetime", required: false}
+            - {label: "Beschreibung", name: "description", widget: "markdown"}
+- label: "Pages"
+  name: "pages"
+  files:
+    - label: "Startseite"
+      name: "home_de"
+      file: "de/index.md"
+      fields:
+        - {widget: hidden, name: layout, default: index}
+        - {label: Spruch unter paletti Schriftzug, name: description, widget: string}
+        - {label: Haupttext, name: body, widget: markdown}
+    - label: "Startseite (englisch)"
+      name: "home_en"
+      file: "en/index.md"
+      fields:
+        - {widget: hidden, name: layout, default: index}
+        - {label: Spruch unter paletti Schriftzug, name: description, widget: string}
+        - {label: Haupttext, name: body, widget: markdown}
+    - label: "Impressum"
+      name: "legal_de"
+      file: "de/legal-notice.md"
+      fields:
+        - {widget: hidden, name: tags, default: footer}
+        - {label: Titel, name: title, widget: string}
+        - {label: Text, name: body, widget: markdown}
+    - label: "Impressum (englisch)"
+      name: "legal_en"
+      file: "en/legal-notice.md"
+      fields:
+        - {widget: hidden, name: tags, default: footer}
+        - {label: Titel, name: title, widget: string}
+        - {label: Text, name: body, widget: markdown}
+ 

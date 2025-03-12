@@ -5,12 +5,15 @@ import { bundle, transform, browserslistToTargets } from "lightningcss";
 import browserslist from "browserslist";
 import htmlmin from "html-minifier";
 import path from "node:path";
-import uglify from "uglify-js";
 import nodeHtmlToImage from 'node-html-to-image';
 import i18n from "eleventy-plugin-i18n";
 import translations from "./_data/i18n/index.mjs";
 
+import { build } from 'esbuild'
+import browserslistToEsbuild from 'browserslist-to-esbuild'
+
 export default function (eleventyConfig) {
+  let js_map = {};
   /*
    * Plugins
    */
@@ -109,6 +112,15 @@ export default function (eleventyConfig) {
     return thisYear;
   });
 
+  eleventyConfig.addAsyncFilter("hashed", async function(filename) {
+
+    if (filename && filename.endsWith(".js")) {
+      return js_map[filename];
+    }
+
+    return filename;
+  });
+
   /*
    * Transforms
    */
@@ -136,19 +148,6 @@ export default function (eleventyConfig) {
     return content;
   });
 
-
-  // Transform to minify JS
-  eleventyConfig.addTransform("jsmin", function(content) {
-    if( this.page.outputPath && this.page.outputPath.endsWith(".js") ) {
-      let minified = uglify.minify(content, {
-        module: true
-      });
-      return minified.code;
-    }
-
-    return content;
-  });
-
   // Transform to minify CSS
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
@@ -160,7 +159,7 @@ export default function (eleventyConfig) {
         return;
       }
 
-      let targets = browserslistToTargets(browserslist("defaults"));
+      let targets = browserslistToTargets(browserslist());
       let result = bundle({
         filename: inputPath,
         minify: true,
@@ -173,6 +172,29 @@ export default function (eleventyConfig) {
       };
     }
   });
+
+
+  eleventyConfig.addWatchTarget("assets/scripts/*.js");
+  eleventyConfig.on(
+		"eleventy.before",
+		async () => {
+			let result = await build({
+        entryPoints: ["assets/scripts/*.js"],
+        entryNames: '[dir]/[name]-[hash]',
+        minify: true,
+        bundle: true,
+        format: "esm",
+        target: browserslistToEsbuild(),
+        metafile: true,
+        outdir: '_site/scripts',
+      })
+
+      js_map = {};
+      for (const [filename, outdata] of Object.entries(result.metafile.outputs)) {
+        js_map[outdata.entryPoint.replace("assets/scripts/", "")] = filename.replace("_site", "");
+      }
+		}
+	);
 
   // Transform to create image previews
   eleventyConfig.addTransform("imagepreview", function(content) {
@@ -189,6 +211,5 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy({"assets/fonts": "fonts"});
-  eleventyConfig.addPassthroughCopy({"assets/scripts": "scripts"});
   eleventyConfig.addPassthroughCopy({"assets/favicons": "."});
 };

@@ -1,9 +1,6 @@
 ---
-newsletter:
-    url: "#"
-    text: "Subscribe newsletter"
-description: "A small festival that appears out of nowhere!"
 layout: index
+description: A small festival that appears out of nowhere!
 ---
 This year it will shoot out of the ground at various green oases in Braunschweig.
 Under the open sky we invite you to create and dance. The program includes workshops, talks and music.

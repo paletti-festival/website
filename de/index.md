@@ -1,9 +1,6 @@
 ---
-newsletter:
-    url: "#"
-    text: "Newsletter abonnieren"
-description: "Das Kleinfestival, das wie aus dem Nichts erscheint!"
 layout: index
+description: Das Kleinfestival, das wie aus dem Nichts erscheint!
 ---
 Es wird dieses Jahr an verschiedenen grünen Oasen in Braunschweig aus dem Boden schießen. Unter freiem Himmel laden wir euch zum Tun und Tanzen ein.
 
