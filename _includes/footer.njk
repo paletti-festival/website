@@ -25,8 +25,9 @@
         <span class="sr-only">Toggle darkmode</span>
     </label>
 </div>
+{% set filename = "darkmode.js" | hashed %}
 {% set js %}
-    {% include "assets/scripts/darkmode.js" %}
+    {% include "_site" + filename %}
 {% endset %}
 <script>
     {{ js | safe }}
