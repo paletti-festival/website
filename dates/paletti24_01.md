@@ -16,8 +16,7 @@ program:
     - start: 2024-06-08 14:00:00+02:00
       end: 2024-06-08 15:30:00+02:00
       name: "Awareness und Rassismusaufklärung"
-      description: "In diesem Workshop von Andru geht es um Awareness und Rassismus.
-      Andru ist Awareness Coach und Sprecher des Jugendparlaments in Salzgitter."
+      description: "In diesem Workshop von Andru geht es um Awareness und Rassismus.Andru ist Awareness Coach und Sprecher des Jugendparlaments in Salzgitter."
     - start: 2024-06-08 15:30:00+02:00
       end: 2024-06-08 17:00:00+02:00
       name: "Pflanzenfärben"
