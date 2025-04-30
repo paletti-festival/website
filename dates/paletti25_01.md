@@ -3,6 +3,7 @@ date: 2025-05-10 14:00:00+02:00
 until: 2025-05-11 02:00:00+02:00
 title: "Paletti 05"
 status: "CONFIRMED"
+shift_url: https://signup.com/go/bAPcxUt
 place:
   name: "Institut für Architekturbezogene Kunst"
   address: "Bevenroder Str. 80, Braunschweig"
