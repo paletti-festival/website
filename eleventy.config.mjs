@@ -197,17 +197,17 @@ export default function (eleventyConfig) {
 	);
 
   // Transform to create image previews
-  eleventyConfig.addTransform("imagepreview", function(content) {
-    if( this.page.outputPath && this.page.outputPath.endsWith(".png") ) {
-      nodeHtmlToImage({
-        output: this.page.outputPath,
-        html: content
-      })
-      .then(() => console.log('The image was created successfully!'))
-    }
+  // eleventyConfig.addTransform("imagepreview", function(content) {
+  //   if( this.page.outputPath && this.page.outputPath.endsWith(".png") ) {
+  //     nodeHtmlToImage({
+  //       output: this.page.outputPath,
+  //       html: content
+  //     })
+  //     .then(() => console.log('The image was created successfully!'))
+  //   }
 
-    return content;
-  });
+  //   return content;
+  // });
 
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy({"assets/fonts": "fonts"});
