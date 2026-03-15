@@ -35,7 +35,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(svgContents);
 
   /*
-   * Cutsom filters
+   * Custom filters
    */
 
   // Filter to minify CSS
