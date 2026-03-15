@@ -2,7 +2,8 @@
     "lang": "de",
     "addToSitempap": true,
     "layout": "layout.njk",
-    "cookie_text": "keine Cookies, kein Tracking – alles paletti",
+    "cookieText": "keine Cookies, kein Tracking – alles paletti",
+    "projectOfUmku": "paletti ist ein Projekt des <b>umweltkulturverein e.V.</b>",
     "newsletter": {
         "success": "Deine Anmeldung war erfolgreich.",
         "error": "Deine Anmeldung konnte nicht gespeichert werden. Bitte versuch es erneut.",
