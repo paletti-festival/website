@@ -1,0 +1,12 @@
+.open-call {
+    border: 2px solid #ef6e4b;
+    padding: 2rem;
+    margin-top: 2rem;
+    h2 {
+        color: #ef6e4b;
+        margin-top: 0;
+    }
+    .button {
+        color: #ef6e4b;
+    }
+}
