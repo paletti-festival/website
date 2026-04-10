@@ -1,0 +1,9 @@
+
+{% set next = collections.dates | nextDate %}
+{% if next and next.data.opencall%}
+<h2>Open Call</h2>
+
+{{ next.data.opencall[lang] | renderContent("md") | safe }}
+
+<a class="button" href="mailto:mail@paletti.info">{{ "opencall.button" | i18n }}</a>
+{% endif %}

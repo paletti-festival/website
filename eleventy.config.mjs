@@ -1,4 +1,4 @@
-import { EleventyI18nPlugin }from "@11ty/eleventy";
+import { EleventyI18nPlugin, RenderPlugin }from "@11ty/eleventy";
 
 import svgContents from "eleventy-plugin-svg-contents";
 import { bundle, transform, browserslistToTargets } from "lightningcss";
@@ -33,6 +33,8 @@ export default function (eleventyConfig) {
 
   // Plugin that allows to include SVG files
   eleventyConfig.addPlugin(svgContents);
+
+  eleventyConfig.addPlugin(RenderPlugin);
 
   /*
    * Custom filters
