@@ -7,6 +7,9 @@ place:
   name: "Kulturraum Jakobi"
   address: "Goslarsche Str. 31-32, 38118 Braunschweig"
   coordinates: 52.265932, 10.504437
+  description:
+    de: "Kulturraum Jakobi e.V. ist ein Verein mit Sitz in Braunschweig. Er ist ein ehrenamtlich getragenes Projekt, das in der nicht mehr aktiv genutzten Kirche St. Jakobi einen Raum für Kunst und Kultur, für Begegnung und Austausch und für neue Ideen schaffen möchte. Der Verein schafft die rechtliche und organisatorische Grundlage. Was hier passiert, entscheiden die Menschen, die mitmachen und diesen Raum nutzen."
+    en: "Kulturraum Jakobi e.V. is a nonprofit organization based in Braunschweig. It is a volunteer-run project that aims to create a space for art and culture, for connection and exchange, and for new ideas within the former St. Jakobi Church, which is no longer in active use. The organization provides the legal and organizational framework. What happens here is decided by the people who participate and use this space."
 opencall:
   de:
     "Die Frühlingssonne hat auch das paletti wach gemacht! 🌞
