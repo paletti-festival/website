@@ -10,48 +10,48 @@ place:
   description:
     de: "Kulturraum Jakobi e.V. ist ein Verein mit Sitz in Braunschweig. Er ist ein ehrenamtlich getragenes Projekt, das in der nicht mehr aktiv genutzten Kirche St. Jakobi einen Raum für Kunst und Kultur, für Begegnung und Austausch und für neue Ideen schaffen möchte. Der Verein schafft die rechtliche und organisatorische Grundlage. Was hier passiert, entscheiden die Menschen, die mitmachen und diesen Raum nutzen."
     en: "Kulturraum Jakobi e.V. is a nonprofit organization based in Braunschweig. It is a volunteer-run project that aims to create a space for art and culture, for connection and exchange, and for new ideas within the former St. Jakobi Church, which is no longer in active use. The organization provides the legal and organizational framework. What happens here is decided by the people who participate and use this space."
-opencall:
-  de:
-    "Die Frühlingssonne hat auch das paletti wach gemacht! 🌞
+# opencall:
+#   de:
+#     "Die Frühlingssonne hat auch das paletti wach gemacht! 🌞
   
 
-    Ihr habt eine kreative Idee, ein Musikprojekt oder könnt euch vorstellen euer Wissen in einem Workshop oder Vortrag zu teilen? Dann seid dabei am 03. Mai im [Kulturraum Jakobi](https://kulturraum-jakobi.de/).
+#     Ihr habt eine kreative Idee, ein Musikprojekt oder könnt euch vorstellen euer Wissen in einem Workshop oder Vortrag zu teilen? Dann seid dabei am 03. Mai im [Kulturraum Jakobi](https://kulturraum-jakobi.de/).
 
 
-    Was wir suchen:
+#     Was wir suchen:
 
 
-    🤸‍♀️ Eine (kleine) Show <br>
-    🚲 Exkurse und Vorträge <br>
-    🪩 Musik und DJs <br>
-    🌱 Deine Idee zum Thema Nachhaltigkeit, Reduktion und Suffizienz
+#     🤸‍♀️ Eine (kleine) Show <br>
+#     🚲 Exkurse und Vorträge <br>
+#     🪩 Musik und DJs <br>
+#     🌱 Deine Idee zum Thema Nachhaltigkeit, Reduktion und Suffizienz
 
 
-    Teilt euer Wissen, eure Leidenschaft und eure Ideen beim 6. paletti-Festival! 🎉
+#     Teilt euer Wissen, eure Leidenschaft und eure Ideen beim 6. paletti-Festival! 🎉
 
 
-    Wir freuen uns auf eure Formate! <br>
-    Schreibt uns bis zum 18. April an [mail@paletti.info](mailto:mail@paletti.info)."
+#     Wir freuen uns auf eure Formate! <br>
+#     Schreibt uns bis zum 18. April an [mail@paletti.info](mailto:mail@paletti.info)."
 
-  en:
-    "The spring sun has woken up the paletti too! 🌞
+#   en:
+#     "The spring sun has woken up the paletti too! 🌞
   
 
-    Do you have a creative idea, a music project, or would you like to share your knowledge in a workshop or talk? Then join us on May 3 at [Kulturraum Jakobi](https://kulturraum-jakobi.de/).
+#     Do you have a creative idea, a music project, or would you like to share your knowledge in a workshop or talk? Then join us on May 3 at [Kulturraum Jakobi](https://kulturraum-jakobi.de/).
 
 
-    What we’re looking for:
+#     What we’re looking for:
 
 
-    🤸‍♀️ A (short) show <br>
-    🚲 Talks and lectures <br>
-    🪩 Music and DJs <br>
-    🌱 Your idea on the topic of sustainability, reduction, and sufficiency
+#     🤸‍♀️ A (short) show <br>
+#     🚲 Talks and lectures <br>
+#     🪩 Music and DJs <br>
+#     🌱 Your idea on the topic of sustainability, reduction, and sufficiency
 
 
-    Share your knowledge, passion, and ideas at the 6th paletti Festival! 🎉
+#     Share your knowledge, passion, and ideas at the 6th paletti Festival! 🎉
 
 
-    We look forward to your submissions! <br>
-    Email us by April 18 at [mail@paletti.info](mailto:mail@paletti.info)."
+#     We look forward to your submissions! <br>
+#     Email us by April 18 at [mail@paletti.info](mailto:mail@paletti.info)."
 ---
