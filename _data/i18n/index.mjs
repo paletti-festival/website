@@ -35,8 +35,8 @@ export default{
             "en": "This was the program for <b>{{ title }}</b> on <b>{{ date }}, {{ place }}</b>."
         },
         "future": {
-            "de": "Derzeit basteln und schrauben wir noch am Programm für das <b>{{ title }}</b> am <b>{{ date }}, {{ place }}</b>. Sobald sich hier etwas tut, werden wir dich über unseren <a href=\"#newsletter\">Newsletter</a> informieren.Aktuell suchen wir noch Künstler*innen.",
-            "en": "We are currently working on the program for the <b>{{ title }}</b> on <b>{{ date }}, {{ place }}</b>. As soon as there is something new, we will inform you via our <a href=\"#newsletter\">newsletter</a>. We are still looking for artists."
+            "de": "Derzeit basteln und schrauben wir noch am Programm für das <b>{{ title }}</b> am <b>{{ date }}, {{ place }}</b>. Sobald sich hier etwas tut, werden wir dich über unseren <a href=\"#newsletter\">Newsletter</a> informieren.",
+            "en": "We are currently working on the program for the <b>{{ title }}</b> on <b>{{ date }}, {{ place }}</b>. As soon as there is something new, we will inform you via our <a href=\"#newsletter\">newsletter</a>."
         },
         "planned": {
             "de": "Das Programm für <b>{{ title }}</b> am <b>{{ date }}, {{ place }}</b>.<br> Wie immer werden wir am Nachmittag etwas Leckeres zu essen anbieten.",
