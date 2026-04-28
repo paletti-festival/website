@@ -1,7 +1,7 @@
 ---
 date: 2026-05-03 14:00:00+02:00
 until: 2026-05-03 22:00:00+02:00
-title: "Paletti"
+title: "Paletti 06"
 status: "CONFIRMED"
 place:
   name: "Kulturraum Jakobi"
