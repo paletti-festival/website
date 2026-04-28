@@ -54,4 +54,6 @@ place:
 
 #     We look forward to your submissions! <br>
 #     Email us by April 18 at [mail@paletti.info](mailto:mail@paletti.info)."
+shift_url: https://signup.com/go/QbghSMA
+
 ---
