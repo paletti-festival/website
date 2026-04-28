@@ -30,9 +30,20 @@
                     {%- for workshop in next.data.program.workshops -%}
                         <div class="item">
                             <h4>{{ workshop.name }}</h4>
+                            {% if  workshop.start and workshop.end %}
                             <div class="time">
                                 {{ workshop.start | formatTime }} – {{ workshop.end | formatTime }}
                             </div>
+                            {% elseif workshop.start %}
+                            <div class="time">
+                                ab {{ workshop.start | formatTime }}
+                            </div>  
+                            {% endif %}
+                            {% if  workshop.allday %}
+                            <div class="time">
+                                all day
+                            </div>
+                            {% endif %}
                             <p>{{ workshop.description }}</p>
                         </div>
                     {%- endfor -%}
