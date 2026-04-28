@@ -2,7 +2,7 @@
 layout: index
 description: Das Kleinfestival, das wie aus dem Nichts erscheint!
 ---
-Es wird dieses Jahr an verschiedenen grünen Oasen in Braunschweig aus dem Boden schießen. Unter freiem Himmel laden wir euch zum Tun und Tanzen ein.
+Es wird dieses Jahr an verschiedenen grünen Oasen in Braunschweig aus dem Boden schießen. Wir laden euch zum Tun und Tanzen ein.
 
 Im Programm finden sich Workshops, Talks und Musik wieder. Als Sammelsurium von Menschen, die sich für dieses Projekt zusammengefunden haben, stecken wir voller Tatendrang und wollen ein neues Format in die Welt bringen.
    
