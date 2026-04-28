@@ -3,7 +3,7 @@ layout: index
 description: A small festival that appears out of nowhere!
 ---
 This year it will shoot out of the ground at various green oases in Braunschweig.
-Under the open sky we invite you to create and dance. The program includes workshops, talks and music.
+We invite you to create and dance. The program includes workshops, talks and music.
 
 As a hodgepodge of people who have come together for this project, we are full of drive and want to bring a new format into the world.
 
