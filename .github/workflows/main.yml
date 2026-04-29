@@ -1,4 +1,6 @@
 on:
+  schedule:
+    - cron: '0 3 * * *'  # Every day at midnight UTC
   workflow_dispatch:
   push:
     branches:
