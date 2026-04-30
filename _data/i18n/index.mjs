@@ -3,6 +3,10 @@ export default{
         "en": "dates",
         "de": "Termine"
     },
+    "time-from": {
+        "en": "from",
+        "de": "ab"
+    },
     "free entrance": {
         "en": "Free entrance",
         "de": "Eintritt frei"

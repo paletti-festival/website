@@ -36,7 +36,7 @@
                             </div>
                             {% elseif workshop.start %}
                             <div class="time">
-                                ab {{ workshop.start | formatTime }}
+                                {{ "time-from" | i18n }} {{ workshop.start | formatTime }}
                             </div>  
                             {% endif %}
                             {% if  workshop.allday %}
