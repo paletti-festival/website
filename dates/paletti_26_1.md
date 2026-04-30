@@ -103,12 +103,15 @@ program:
     - name: Yrrwesen
       start: 2026-05-03 18:00:00+02:00
       end: 2026-05-03 19:00:00+02:00
+      description:  Organisches Techno  das aus zahlreichen Spuren zusammengewischt und  mit eigenen Instrumenten sowie Vocals Live ergänzt wird. Es erwartet euch ein atmosphärisches downtempo.
 
     - name: Quarki
       start: 2026-05-03 19:15:00+02:00
       end: 2026-05-03 20:15:00+02:00
+      description: Leichtfüßige housebeats die zum tanzen einlädt. Und was gibt es schöneres als sonntags zu tanzen?!
 
     - name: Shari Sophie
       start: 2026-05-03 20:30:00+02:00
       end: 2026-05-03 21:30:00+02:00
+      description: Ein elektronischer Sound live erlebbar, womit ein Raum geschaffen wird, in dem sich alle so richtig lebendig fühlen, Gefühle erleben und alle so sein können wie sie sind. Mit Live-Vocals, Synthesizer und Finger Drumming macht shari einen weiten, atmosphärischen, tanzbaren Sound, mit dem jede*r träumen, abdriften, und den Abend ausklingen lassen kann.
 ---
