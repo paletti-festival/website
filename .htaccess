@@ -22,7 +22,20 @@
 
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1/ [R=301,L]
 
-RewriteRule ^$ /de [L,R=301]
+# 1. paletti-festival.de → paletti.info (immer https + www)
+RewriteCond %{HTTP_HOST} ^(www\.)?paletti-festival\.de$ [NC]
+RewriteRule ^(.*)$ https://www.paletti.info/$1 [R=301,L]
+
+# 2. www + https auf paletti.info erzwingen
+RewriteCond %{HTTP_HOST} ^paletti\.info$ [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.paletti.info/$1 [R=301,L]
+
+# 3. Root → /de/
+RewriteRule ^$ /de/ [R=301,L]
+
+# 4. Trailing Slash erzwingen (wenn kein File)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ /$1/ [R=301,L]
