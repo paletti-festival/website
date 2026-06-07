@@ -16,12 +16,12 @@ jobs:
       with:
         timezoneLinux: "Europe/Berlin"
     - name: 🚚 Get latest code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
-    - name: Use Node.js 21
-      uses: actions/setup-node@v4
+    - name: Use Node.js 24
+      uses: actions/setup-node@v6
       with:
-        node-version: '21.3'
+        node-version: '24.12'
       
     - name: 🔨 Build Project
       run: |
@@ -29,7 +29,7 @@ jobs:
         yarn run build
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: SamKirkland/FTP-Deploy-Action@v4.4.0
       with:
         server: ${{ secrets.server }}
         username: ${{ secrets.user }}
