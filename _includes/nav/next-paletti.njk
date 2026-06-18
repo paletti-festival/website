@@ -2,6 +2,6 @@
 {% if next %}
 <div class="header-teaser">
     <span>Next Paletti:</span>
-    <div>{{ next.date | formatDate}}<br>{{ next.data.place.name }}</div>
+    <div>{{ next.data.start | formatDate}}<br>{{ next.data.place.name }}</div>
 </div>
 {% endif %}

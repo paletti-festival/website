@@ -1,6 +1,6 @@
 ---
-date: 2023-09-23 14:00:00+02:00
-until: 2023-09-24 00:00:00+02:00
+start: 2023-09-23 14:00:00+02:00
+end: 2023-09-24 00:00:00+02:00
 title: "Paletti 03"
 status: "CONFIRMED"
 shift_url: https://signup.com/go/nnyyvpN

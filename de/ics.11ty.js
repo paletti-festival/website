@@ -29,12 +29,12 @@ module.exports = class {
         const events = [];
 
         for (const { data } of collections.dates) {
-            const { title, date, until, place, program, status } = data;
+            const { title, start, end, place, program, status } = data;
 
             const event = {
                 title,
-                start: date.getTime(),
-                end: until ? until.getTime() : null,
+                start: start.getTime(),
+                end: end ? end.getTime() : null,
                 startOutputType: "local",
                 calName: "Paletti Kleinfestival"
             }

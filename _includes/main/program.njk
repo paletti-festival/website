@@ -4,7 +4,7 @@
     {% set isPast = true %}
 {% endif %}
 {% if next %}
-{% set date = next.date | formatDate %}
+{% set date = next.data.start | formatDate %}
 {% set title =  next.data.title %}
 {% set place = next.data.place %}
 

@@ -1,6 +1,6 @@
 ---
-date: 2025-02-15 12:00:00+01:00
-until: 2025-02-15 20:00:00+01:00
+start: 2025-02-15 12:00:00+01:00
+end: 2025-02-15 20:00:00+01:00
 title: "Winterwonderland"
 status: "CONFIRMED"
 place:

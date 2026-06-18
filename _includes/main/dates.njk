@@ -10,15 +10,15 @@
             </div>
             <div class="row">
                 <div class="date-time">
-                    <span class="date">{{ post.data.date | formatDate }}</span>
-                    {% if post.data.until %}
+                    <span class="date">{{ post.data.start | formatDate }}</span>
+                    {% if post.data.end %}
                     <span class="time">
-                        {{ post.data.date | formatTime }} –
-                        {{ post.data.until | formatTime }}
+                        {{ post.data.start | formatTime }} –
+                        {{ post.data.end | formatTime }}
                     </span>
                     {% else %}
                     <span class="time">
-                        {{ post.data.date | formatTime }}
+                        {{ post.data.start | formatTime }}
                     </span>
                     {% endif %}
                 </div>

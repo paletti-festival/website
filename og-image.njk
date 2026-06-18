@@ -14,10 +14,10 @@ layout: og-image
     </div>
     <div class="row">
         <div class="date-time">
-            <span class="date">{{ next.data.date | formatDate}}</span>
+            <span class="date">{{ next.data.start | formatDate}}</span>
             <span class="time">
-                {{ next.data.date | formatTime}} –
-            {{ next.data.until | formatTime}}
+                {{ next.data.start | formatTime}} –
+            {{ next.data.end | formatTime}}
             </span>
         </div>
     </div>

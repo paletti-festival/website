@@ -1,6 +1,6 @@
 ---
-date: 2024-06-08 14:00:00+02:00
-until: 2024-06-09 02:00:00+02:00
+start: 2024-06-08 14:00:00+02:00
+end: 2024-06-09 02:00:00+02:00
 title: "Paletti 04"
 status: "CONFIRMED"
 shift_url: https://signup.com/go/fKCJxDK

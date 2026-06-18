@@ -75,7 +75,7 @@ export default function (eleventyConfig) {
     const now = new Date();
 
     for (let event of events) {
-      if (now < event.data.until && event.data.status === "CONFIRMED") {
+      if (now < event.data.end && event.data.status === "CONFIRMED") {
         return event;
       }
     }
@@ -89,10 +89,10 @@ export default function (eleventyConfig) {
     let last = null;
 
     for (let event of events) {
-      const evenEnd = new Date(event.data.until);
+      const evenEnd = new Date(event.data.end);
       const eventEndPlusTwoMonth = new Date(evenEnd.setMonth(evenEnd.getMonth() + 2))
 
-      if (now > event.data.until && eventEndPlusTwoMonth > now && event.data.status === "CONFIRMED") {
+      if (now > event.data.end && eventEndPlusTwoMonth > now && event.data.status === "CONFIRMED") {
         last = event;
       }
     }
@@ -106,7 +106,7 @@ export default function (eleventyConfig) {
     let thisYear = [];
 
     for (let event of events) {
-      const eventdate = event.data.until ? event.data.until : event.data.date
+      const eventdate = event.data.end ? event.data.end : event.data.start
       if (eventdate.getFullYear() == now.getFullYear()) {
         thisYear.push(event)
       }
