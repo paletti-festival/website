@@ -5,7 +5,7 @@ editor:
   preview: false
 
 backend:
-  name: github
+  name: git-gateway
   repo: paletti-festival/website
   branch: main
 
