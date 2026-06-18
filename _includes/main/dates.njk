@@ -11,10 +11,16 @@
             <div class="row">
                 <div class="date-time">
                     <span class="date">{{ post.data.date | formatDate }}</span>
+                    {% if post.data.until %}
                     <span class="time">
                         {{ post.data.date | formatTime }} –
                         {{ post.data.until | formatTime }}
                     </span>
+                    {% else %}
+                    <span class="time">
+                        {{ post.data.date | formatTime }}
+                    </span>
+                    {% endif %}
                 </div>
                 <span class="text">
                     {{"free entrance" | i18n}}<br>

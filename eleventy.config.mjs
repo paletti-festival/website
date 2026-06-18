@@ -106,7 +106,8 @@ export default function (eleventyConfig) {
     let thisYear = [];
 
     for (let event of events) {
-      if (event.data.until.getFullYear() == now.getFullYear()) {
+      const eventdate = event.data.until ? event.data.until : event.data.date
+      if (eventdate.getFullYear() == now.getFullYear()) {
         thisYear.push(event)
       }
     }

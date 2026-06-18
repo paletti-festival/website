@@ -34,7 +34,7 @@ module.exports = class {
             const event = {
                 title,
                 start: date.getTime(),
-                end: until.getTime(),
+                end: until ? until.getTime() : null,
                 startOutputType: "local",
                 calName: "Paletti Kleinfestival"
             }
