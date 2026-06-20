@@ -1,6 +1,6 @@
 
 {% set next = collections.dates | nextDate %}
-{% if next and next.data.opencall%}
+{% if next and next.data.opencall and next.data.opencall.end | notOver %}
 <h2>Open Call</h2>
 
 {{ next.data.opencall[lang] | renderContent("md") | safe }}

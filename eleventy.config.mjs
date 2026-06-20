@@ -73,14 +73,21 @@ export default function (eleventyConfig) {
   // Filter to get next event
   eleventyConfig.addAsyncFilter("nextDate", async function(events) {
     const now = new Date();
+    let next = null
+    let nextdate = null
 
     for (let event of events) {
-      if (now < event.data.end && event.data.status === "CONFIRMED") {
-        return event;
+      const eventdate = event.data.end ? event.data.end : event.data.start
+      if (now < eventdate && event.data.status === "CONFIRMED") {
+        if (next == null || nextdate > eventdate) {
+          next = event
+          nextdate = eventdate
+        }
       }
     }
 
-    return null;
+
+    return next;
   });
 
   // Filter to get last event
@@ -89,8 +96,8 @@ export default function (eleventyConfig) {
     let last = null;
 
     for (let event of events) {
-      const evenEnd = new Date(event.data.end);
-      const eventEndPlusTwoMonth = new Date(evenEnd.setMonth(evenEnd.getMonth() + 2))
+      const eventEnd = new Date(event.data.end);
+      const eventEndPlusTwoMonth = new Date(eventEnd.setMonth(eventEnd.getMonth() + 2))
 
       if (now > event.data.end && eventEndPlusTwoMonth > now && event.data.status === "CONFIRMED") {
         last = event;
@@ -123,6 +130,10 @@ export default function (eleventyConfig) {
 
     return filename;
   });
+
+  eleventyConfig.addFilter("notOver", function(date) {
+    return date > Date.now()
+  })
 
   /*
    * Transforms

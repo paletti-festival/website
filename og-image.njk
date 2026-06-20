@@ -15,10 +15,16 @@ layout: og-image
     <div class="row">
         <div class="date-time">
             <span class="date">{{ next.data.start | formatDate}}</span>
+            {% if next.data.end %}
             <span class="time">
-                {{ next.data.start | formatTime}} –
-            {{ next.data.end | formatTime}}
+                {{ next.data.start | formatTime }} –
+                {{ next.data.end | formatTime }}
             </span>
+            {% else %}
+            <span class="time">
+                {{ next.data.start | formatTime }}
+            </span>
+            {% endif %}
         </div>
     </div>
     <div class="row">

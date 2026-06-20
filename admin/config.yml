@@ -9,33 +9,82 @@ backend:
   repo: paletti-festival/website
   branch: main
 
-media_folder: "static"
+media_folder: static
 
 collections:
-- name: "dates"
-  label: "Event"
-  folder: "dates"
+- name: dates
+  label: Palettis
+  folder: dates
   create: true
   slug: "{{slug}}"
   fields:
-    - {label: "Eventname", name: "title", widget: "string"}
-    - {label: "Start", name: "date", widget: "datetime"}
-    - {label: "Ende", name: "until", widget: "datetime"}
-    - {label: "Status", name: "status", widget: "select", options: [{label: "Bestätigt", value: "CONFIRMED"}, {label: "Vorläufig", value: "TENTATIVE"}]}
-    - {label: "Link für Schichten", name: "shift_url", widget: "string", required: false}
-    - label: "Addresse"
-      name: "place"
-      widget: "object"
+    - label: Paletti name
+      name: title
+      widget: string
+    - label: Start
+      name: start
+      widget: datetime
+    - label: Ende
+      name: end
+      widget: datetime
+      required: false
+    - label: Status
+      hint: bisher nur intern benutzt
+      name: status
+      widget: select
+      options: 
+        - label: Bestätigt
+          value: CONFIRMED
+        - label: Vorläufig
+          value: TENTATIVE
+    - label: Link für Schichten
+      name: shift_url
+      widget: string
+      required: false
+    - label: Open Call
+      name: opencall
+      widget: object
+      fields:
+        - label: anzeigen bis  
+          name: end
+          widget: datetime
+          date_format: true
+          required: false
+        - label: deutsch
+          name: de
+          widget: richtext
+          required: false
+        - label: englisch
+          name: en
+          widget: richtext
+          required: false
+    - label: Adresse
+      name: place
+      widget: object
       fields: 
-        - {label: "Bezeichnung", name: "name", widget: "string"}
-        - {label: "Postadresse", name: "address", widget: "string"}
-        - {label: "Koordinaten", name: "coordinates", widget: "string"}
-        - label: "Kurzbeschreibung"
-          name: "description"
-          widget: "object"
+        - label: Bezeichnung
+          name: name
+          widget: string
+        - label: Postadresse
+          name: address
+          widget: string
+          required: false
+        - label: Koordinaten
+          name: coordinates
+          widget: string
+          required: false
+        - label: Kurzbeschreibung
+          name: description
+          widget: object
           fields:
-            - {label: "deutsch", name: "de", widget: "markdown"}
-            - {label: "englisch", name: "en", widget: "markdown"}
+            - label: deutsch
+              name: de
+              required: false
+              widget: richtext
+            - label: englisch
+              name: en
+              widget: richtext
+              required: false
     - label: "Programm"
       name: "program"
       widget: "object"
@@ -44,26 +93,27 @@ collections:
           name: "workshops"
           widget: "list"
           fields:
-            - {label: "Titel", name: "name", widget: "string"}
-            - {label: "Start", name: "start", widget: "datetime"}
-            - {label: "Ende", name: "end", widget: "datetime"}
-            - {label: "Beschreibung", name: "description", widget: "markdown"}
+            - {label: Titel, name: name, widget: string}
+            - {label: Start, name: start, widget: datetime, required: false}
+            - {label: Ende, name: end, widget: datetime, required: false}
+            - {label: All day, name: allday, widget: boolean, required: false, hint: zeigt "all day" statt der Zeit an. Wenn gesetzt werden Zeiten und Prefix ignoriert}
+            - {label: Beschreibung, name: "description", widget: "richtext", required: false}
         - label: "Vorträge"
           name: "presentations"
           widget: "list"
           fields:
-            - {label: "Titel", name: "name", widget: "string"}
-            - {label: "Start", name: "start", widget: "datetime"}
-            - {label: "Ende", name: "end", widget: "datetime", required: false}
-            - {label: "Beschreibung", name: "description", widget: "markdown"}
+            - {label: Titel, name: name, widget: string}
+            - {label: Start, name: start, widget: datetime, required: false}
+            - {label: Ende, name: end, widget: datetime, required: false}
+            - {label: Beschreibung, name: "description", widget: "richtext", required: false}
         - label: "Musik"
           name: "music"
           widget: "list"
           fields:
-            - {label: "Titel", name: "name", widget: "string"}
-            - {label: "Start", name: "start", widget: "datetime"}
-            - {label: "Ende", name: "end", widget: "datetime", required: false}
-            - {label: "Beschreibung", name: "description", widget: "markdown"}
+            - {label: Titel, name: name, widget: string}
+            - {label: Start, name: start, widget: datetime, required: false}
+            - {label: Ende, name: end, widget: datetime, required: false}
+            - {label: Beschreibung, name: "description", widget: "richtext", required: false}
 - label: "Pages"
   name: "pages"
   files:
@@ -73,26 +123,26 @@ collections:
       fields:
         - {widget: hidden, name: layout, default: index}
         - {label: Spruch unter paletti Schriftzug, name: description, widget: string}
-        - {label: Haupttext, name: body, widget: markdown}
+        - {label: Haupttext, name: body, widget: richtext}
     - label: "Startseite (englisch)"
       name: "home_en"
       file: "en/index.md"
       fields:
         - {widget: hidden, name: layout, default: index}
         - {label: Spruch unter paletti Schriftzug, name: description, widget: string}
-        - {label: Haupttext, name: body, widget: markdown}
+        - {label: Haupttext, name: body, widget: richtext}
     - label: "Impressum"
       name: "legal_de"
       file: "de/legal-notice.md"
       fields:
         - {widget: hidden, name: tags, default: footer}
         - {label: Titel, name: title, widget: string}
-        - {label: Text, name: body, widget: markdown}
+        - {label: Text, name: body, widget: richtext}
     - label: "Impressum (englisch)"
       name: "legal_en"
       file: "en/legal-notice.md"
       fields:
         - {widget: hidden, name: tags, default: footer}
         - {label: Titel, name: title, widget: string}
-        - {label: Text, name: body, widget: markdown}
+        - {label: Text, name: body, widget: richtext}
  
