@@ -4,12 +4,20 @@ start: 2023-07-22 14:00:00+02:00
 end: 2023-07-23 00:00:00+02:00
 status: CONFIRMED
 shift_url: https://signup.com/go/hquhHjt
+opencall:
+  en: ""
 place:
   name: Garten Lebenshilfe
   address: Spargelstraße 6, Braunschweig
   description:
-    de: "Versteckt zwischen Schrebergärten findet das Paletti 02 im Garten der Lebenshilfe Braunschweig statt. Auf das Gelände kommt ihr über die Spargelstraße.Der Eingang befindet sich zwischen Freyastraße und Wodanstraße."
-    en: "Hidden between garden plots the Paletti 02 takes place in the garden of the Lebenshilfe Braunschweig takes place. You can get to the site via Spargelstraße. The entrance is located between Freyastraße and Wodanstraße."
+    de: Versteckt zwischen Schrebergärten findet das Paletti 02 im Garten der
+      Lebenshilfe Braunschweig statt. Auf das Gelände kommt ihr über die
+      Spargelstraße.Der Eingang befindet sich zwischen Freyastraße und
+      Wodanstraße.
+    en: Hidden between garden plots the Paletti 02 takes place in the garden of the
+      Lebenshilfe Braunschweig takes place. You can get to the site via
+      Spargelstraße. The entrance is located between Freyastraße and
+      Wodanstraße.
   coordinates: 52.2832, 10.5312
 program:
   workshops:
@@ -17,8 +25,8 @@ program:
       start: 2023-07-22 15:00:00+02:00
       end: 2023-07-22 18:00:00+02:00
       description: Bedrucke deine neu gewonnene Kleidung oder einen fairen Jutebeutel
-        mit Dingen, die du auf dem Gelände findest. Cindy wird dir helfen, damits
-        am Ende richtig fresh aussieht.
+        mit Dingen, die du auf dem Gelände findest. Cindy wird dir helfen,
+        damits am Ende richtig fresh aussieht.
     - name: Die fabulöse Flora und Fauna Gartentour mit François
       start: 2023-05-20 18:00:00+02:00
       end: 2023-05-20 19:00:00+02:00
@@ -52,10 +60,10 @@ program:
     - name: Primetime! Andy plaudert über unser Toilettenkonzept
       start: 2023-05-20 19:15:00+02:00
       description: Unsere Toiletten sind etwas anders als ein herkömmliches
-        Wasserklosett oder das altbekannte Dixi. Wir trennen! Dadurch verbrauchen
-        wir weniger Wasser und können EU-zugelassenen Biodünger aus Urin
-        herstellen. Wie das genau geht und warum das wichtig ist erklärt euch
-        Andy vom ISWW (Institut für Siedlungswasserwirtschaft)!
+        Wasserklosett oder das altbekannte Dixi. Wir trennen! Dadurch
+        verbrauchen wir weniger Wasser und können EU-zugelassenen Biodünger aus
+        Urin herstellen. Wie das genau geht und warum das wichtig ist erklärt
+        euch Andy vom ISWW (Institut für Siedlungswasserwirtschaft)!
       end: 2023-07-15T12:16:50.760Z
     - name: Quizzen und Gewinnen mit Timi Ocean
       start: 2023-05-20 21:00:00+02:00
@@ -67,7 +75,7 @@ program:
     - start: 2023-07-22 16:00:00+02:00
       end: 2023-07-22 17:30:00+02:00
       name: Talie Piraza Kasimir
-      description:
+      description: >-
         Talie Piraza Kasimir is a collection of art of sound in time that
         expresses emotions questions and myths gathered along the way. Walking
         this planet as a human being she gives in to the urge of telling what is
