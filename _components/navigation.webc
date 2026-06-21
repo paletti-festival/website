@@ -1,0 +1,20 @@
+<script webc:setup>
+	let next = await nextDate(collections.dates)
+</script>
+<a href="locale_url('/')" class="logo" @html="svgContents('/assets/images/paletti_logo.svg')">
+    <span class="sr-only">Home</span>
+</a>
+<div webc:if="next" class="header-teaser">
+    <span>Next Paletti:</span>
+    <div>
+        <span webc:nokeep @text="formatDate(next.data.start)"></span>
+        <br>
+        <span webc:nokeep @text="next.data.place.name"></span>
+    </div>
+</div>
+<div class="languages">
+    <a webc:for="link of locale_links(page.url)" :href="link.url" :lang="link.lang" :hreflang="link.lang">
+        <span webc:nokeep @html="svgContents('/assets/images/languages.svg')"></span>
+        <span webc:nokeep @text="link.label"></span>
+    </a>
+</div>

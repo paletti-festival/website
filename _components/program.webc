@@ -1,0 +1,69 @@
+<script webc:setup>
+	let next = await nextDate(collections.dates)
+    let past = false
+    
+    if (!next) {
+        next = await lastDate(collections.dates)
+        past = true
+    }
+
+    let placeholder = {
+        title: next.data.title,
+        place: next.data.place.name,
+        date: formatDate(next.data.start)
+    }
+</script>
+
+<h2 @text="i18n('program')"></h2>
+
+<div class="program-text">
+    <span webc:nokeep webc:if="!next.data.program" @html="i18n('program.future', placeholder)"></span>
+    <span webc:nokeep webc:elseif="past" @html="i18n('program.past', placeholder)"></span>
+    <span webc:nokeep webc:else @html="i18n('program.planned', placeholder)"></span>
+</div>
+<div class="program" webc:if="next.data.program">
+    <div class="category" webc:if="next.data.program.workshops">
+        <div class="headline-container">
+            <h3 @text="i18n('workshops')"></h3>
+        </div>
+        <div class="items">
+            <program-item
+                webc:for="item of next.data.program.workshops"
+                :name="item.name"
+                :start="item.start"
+                :end="item.end"
+                :description="item.description"
+                :allday="item.allday"
+                prefix="ab"
+            ></program-item>
+        </div>
+    </div>
+    <div class="category" webc:if="next.data.program.presentations">
+        <div class="headline-container">
+            <h3 @text="i18n('talks')"></h3>
+        </div>
+        <div class="items">
+            <program-item
+                webc:for="item of next.data.program.presentations"
+                :name="item.name"
+                :start="item.start"
+                :end="item.end"
+                :description="item.description"
+            ></program-item>
+        </div>
+    </div>
+    <div class="category" webc:if="next.data.program.music">
+        <div class="headline-container">
+            <h3 @text="i18n('music')"></h3>
+        </div>
+        <div class="items">
+            <program-item
+                webc:for="item of next.data.program.music"
+                :name="item.name"
+                :start="item.start"
+                :end="item.end"
+                :description="item.description"
+            ></program-item>
+        </div>
+    </div>
+</div>

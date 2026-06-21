@@ -1,0 +1,10 @@
+<div class="item">
+    <h4 @text="name"></h4>
+    <div class="time" webc:if="allday">all day</div>
+    <div class="time" webc:elseif="start">
+        <span webc:nokeep webc:if="prefix && !end" @text="prefix"></span>
+        <span webc:nokeep @text="formatTime(start)"></span>
+        <span webc:nokeep @text="'– ' + formatTime(end)" webc:if="end"></span>
+    </div>
+    <p webc:if="description" @text="description"></p>
+</div>

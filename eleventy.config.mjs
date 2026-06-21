@@ -1,4 +1,5 @@
 import { EleventyI18nPlugin, RenderPlugin }from "@11ty/eleventy";
+import pluginWebc from "@11ty/eleventy-plugin-webc";
 
 import svgContents from "eleventy-plugin-svg-contents";
 import { bundle, transform, browserslistToTargets } from "lightningcss";
@@ -21,6 +22,14 @@ export default function (eleventyConfig) {
   // Language plugin that handles i18n links
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "de",
+  });
+
+  eleventyConfig.addPlugin(pluginWebc, {
+    bundlePluginOptions: {
+      transforms: [
+        // TODO transforms
+      ]
+    }
   });
 
   // i18n plugin that handles translations
@@ -161,32 +170,6 @@ export default function (eleventyConfig) {
 
     return content;
   });
-
-  // Transform to minify CSS
-  eleventyConfig.addTemplateFormats("css");
-  eleventyConfig.addExtension("css", {
-    outputFileExtension: "css",
-
-    compile: async function(inputContent, inputPath) {
-      let parsed = path.parse(inputPath);
-      if(parsed.name.startsWith("_")) {
-        return;
-      }
-
-      let targets = browserslistToTargets(browserslist());
-      let result = bundle({
-        filename: inputPath,
-        minify: true,
-        sourceMap: true,
-        targets
-      });
-
-      return async (data) => {
-        return result.code;
-      };
-    }
-  });
-
 
   eleventyConfig.addWatchTarget("assets/scripts/*.js");
   eleventyConfig.on(

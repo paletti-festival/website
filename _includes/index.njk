@@ -1,6 +1,9 @@
 ---
 layout: base
 ---
+<style>
+    {{ "assets/styles/main.css" | cssmin | safe }}
+</style>
 <section class="start wrapper">
     <h1><span>paletti</span> {{ description }}</h1>
     {{ content | safe }}
@@ -9,7 +12,7 @@ layout: base
     {% include 'main/location.njk' %}
 </section>
 <section class="wrapper">
-    {% include 'main/program.njk' %}
+    <program></program>
 </section>
 <section class="wrapper {# open-call #}">
     {% include 'main/open-call.njk' %}
