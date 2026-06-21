@@ -210,4 +210,5 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(".htaccess");
   eleventyConfig.addPassthroughCopy({"assets/fonts": "fonts"});
   eleventyConfig.addPassthroughCopy({"assets/favicons": "."});
+  eleventyConfig.addPassthroughCopy("assets/styles");
 };
