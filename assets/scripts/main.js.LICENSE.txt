@@ -4,9 +4,9 @@
  * Copyright © 2014 David Bushell | BSD & MIT license | https://github.com/Pikaday/Pikaday
  */
 
-/*! ../../dependencies/dialerSelect */
+/*! ../../common */
 
-/*! ../../main */
+/*! ../../dependencies/dialerSelect */
 
 /*! ../../modules/_core */
 
@@ -711,6 +711,10 @@
 /*! set-function-length */
 
 /*! string.prototype.trim */
+
+/*!*******************!*\
+  !*** ./common.js ***!
+  \*******************/
 
 /*!*****************************!*\
   !*** ./main.js + 3 modules ***!
