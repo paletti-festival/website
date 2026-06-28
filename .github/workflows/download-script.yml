@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FILE_URL: https://sibforms.com/forms/end-form/build/main.js
-      TARGET_FILE: scripts/main.js
+      TARGET_FILE: assets/scripts/main.js
       COMMIT_MESSAGE: "Update sib main.js"
     steps:
       - uses: actions/checkout@v4
@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FILE_URL: https://sibforms.com/forms/end-form/build/main.js.LICENSE.txt
-      TARGET_FILE: scripts/main.js.LICENSE.txt
+      TARGET_FILE: assets/scripts/main.js.LICENSE.txt
       COMMIT_MESSAGE: "Update sib main.js.LICENSE.txt"
     steps:
       - uses: actions/checkout@v4
